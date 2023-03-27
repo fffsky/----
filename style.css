@@ -1,0 +1,760 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    background: #FFFBEC;
+    font-family: 'Noto Serif JP', serif;
+}
+p{
+    font-weight: 100;
+    color: #814719;
+    margin: 0;
+}
+dl,dt,dd{
+    margin: 0;
+    color: #814719;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+ol,ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/********************************************************
+header
+**********************************************************/
+
+.header__logo{
+    position: fixed;
+    top: 25px;
+    left: 45px;
+    width: 5%;
+    z-index: 9999;
+}
+
+
+/********************************************************
+全体設定
+**********************************************************/
+.container{
+    width: 95%;
+    margin: 120px auto;
+    max-width: 1300px;
+}
+
+.title{
+    /* background-image: url(img/bg.png);
+    background-size: cover;
+    background-position: center; */
+    padding: 15px 0;
+    text-align: center;
+    margin: 50px 0;
+}
+.title h2{
+    color: #71713D;
+    font-weight: bold;
+    font-size: 3.0rem;
+}
+
+
+/********************************************************
+ハンバーガーメニュー
+**********************************************************/
+
+.main_menu{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(113, 113, 61, 0.6);
+    z-index: 9999;
+}
+.main_menu span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.main_menu span:nth-of-type(1){
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 2px;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+
+.main_menu span:nth-of-type(2){
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 2px;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+
+
+
+
+/********************************************************
+メインビジュアル
+**********************************************************/
+.fv{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.fv img{
+    object-fit: cover;
+}
+/* テキスト */
+.fv__txt{
+    position: absolute;
+    top : 55%;
+    left: 10%;
+    width: 100%;
+    color: #fff;
+}
+.fv__txt h3{
+    font-weight: bold;
+    margin: 0;
+    border-bottom: 2px solid;
+    width: fit-content;
+    font-size: 1.8rem;
+    color: #fff;
+}
+.fv__txt p:nth-of-type(1){
+    font-weight: bold;
+    margin: 10px 0 ;
+    font-size: 3.0rem;
+    color: #fff;
+}
+.fv__txt p:nth-of-type(2){
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+}
+.fv nav img{
+    display: block;
+    height: 10px;
+}
+.fv nav{
+    position: absolute;
+    bottom: 15%;
+    left: 50px;
+}
+.fv nav ul{
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+}
+.fv nav ul li{
+    margin:0 20px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+/********************************************************
+酵素風呂のコンセプト
+**********************************************************/
+.concept{
+    margin: 100px auto ;
+    position: relative;
+    max-width: 1300px;
+}
+/* 背景画像 */
+.concept__img{
+    width: 20%;
+    margin: 0 auto;
+}
+.concept__img img{
+    object-fit: cover;
+}
+/* テキスト */
+.concept__txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+
+}
+.concept__txt p{
+    letter-spacing: 2px;
+    line-height: 2.0;
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+/********************************************************
+酵素風呂について
+**********************************************************/
+.message__list{
+    display: flex;
+    margin: 40px 0;
+}
+/* テキスト */
+.message__item__txt__inner{
+    width: 70%;
+    padding: 0 35px;
+    margin: 60px 0;
+}
+/* タイトル */
+.message__item__txt p:nth-of-type(1){
+    margin: 20px 0;
+    font-size: 2.2rem;
+    border-bottom: 1px solid;
+    width: fit-content;
+    font-weight: bold;
+    color: #F89E34;
+}
+/* 説明文 */
+.message__item__txt p:nth-of-type(2){
+    margin: 0 0 60px;
+}
+/* 画像 */
+.message__item__img{
+    width: 30%;
+    position: relative;
+    height: auto;
+}
+.message__item__img img{
+    object-fit: cover;
+    padding: 0 30px;
+}
+.message__item__img__txt{
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    height: auto;
+    font-size: 2.8rem;
+}
+.message__item__img__txt p{
+    color: #71713D;
+    font-weight: bold;
+    line-height: 2.0;
+
+}
+.message__item__img__txt p:nth-child(2){
+    margin-top: 30px;
+
+}
+
+/********************************************************
+酵素風呂の効果
+**********************************************************/
+.effect__title{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.0rem;
+}
+.effect__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* コンテンツ */
+.effect__item{
+    width: 30%;
+    margin: 0 10px 50px;
+}
+/* 画像 */
+.effect__item img{
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+/* タイトル */
+.effect__item p:nth-of-type(1){
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+/* 説明文 */
+.effect__item p:nth-of-type(2){
+    padding: 0 15px;
+}
+
+
+
+/********************************************************
+こだわり
+*********************************************************/
+/* コンテンツ */
+.pick__flex{
+    display: flex;
+}
+.pick__inner{
+    width: 70%;
+}
+.pick__list{
+    padding: 0 35px;
+}
+.pick__img__item{
+    margin: 0 0 45px;
+}
+/* 画像 */
+.pick__img__item__img{
+    width: 40%;
+}
+.pick__img__item__img img{
+    width: 75%;
+}
+/* テキスト */
+.pick__img__item__txt{
+    width: 100%;
+    margin: 25px 0 70px;
+    padding: 0 30px;
+}
+/* タイトル */
+.pick__img__item__txt h4{
+    font-size: 2.0rem;
+    color: #956c1d;
+    border-bottom: 2px solid;
+    width: fit-content;
+    line-height: 1.2;
+    margin: 15px 0;
+    font-weight: bold;
+}
+/* 説明文 */
+.pick__img__item__txt p{
+    color: #814719;
+}
+
+/********************************************************
+料金案内
+**********************************************************/
+/* メインタイトル */
+.price__inner{
+    display: flex;
+}
+.price__main__tittle{
+    text-align: center;
+    font-size: 2.0rem;
+    margin: 0 0 30px;
+}
+.price__detail{
+    width: 70%;
+}
+/* 表 */
+.price__item{
+    width: fit-content;
+    margin: 0 auto 20px;
+    border: 1px solid;
+}
+.price__item dl{
+    display: flex;
+    align-items:  baseline;
+    text-align: center;
+}
+/* 表(左) */
+.price__tittle{
+    font-size: 2.5rem;
+    color: #814719;
+    background: rgb(219, 219, 219);
+    padding: 10px 20px;
+    width: 150px;
+}
+/* 表(右) */
+.price__marge{
+    width: 350px;
+    font-size: 2.5rem;
+    color: #814719;
+}
+.price__marge span{
+    font-size: 1.3rem;
+}
+/* 点線 */
+.border{
+    height: 0;
+    border: 0;
+    border-bottom: 1px dotted;
+    margin: 0;
+}
+
+/* ペア割 */
+.price__pair{
+    margin-bottom: 65px;
+}
+.price__pair dl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0;
+}
+.price__pair__tittle{
+    color: red;
+    font-size: 2.3rem;
+}
+.price__pair__marge{
+    margin-left: 30px;
+}
+
+.price__txt{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 3%;
+    margin-bottom: 65px;
+    font-size: 1.3rem;
+
+}
+
+
+/* 支払い */
+.money {
+    text-align: center;
+}
+.money img{
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+.money p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+
+}
+
+
+
+
+
+/********************************************************
+写真
+**********************************************************/
+.photo__item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+/* 画像 */
+.photo__item img{
+    width: 21%;
+    height: 230px;
+    object-fit: cover;
+    margin: 2%;
+    border-radius: 10px;
+}
+/* instagram */
+.instagram__link{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 15px 30px;
+}
+.instagram__link img{
+    width: 40px;
+    height: 40px;
+}
+.instagram__link a{
+    width: 16px;
+    display: block;
+    width: fit-content;
+    margin-left: 10px;
+}
+/********************************************************
+質問
+**********************************************************/
+
+.include-accordion{
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+.accordion__list{
+    margin: 20px 0;
+}
+.accordionBtn{
+    color: #814719;
+    border: 1px solid #814719;
+    border-radius: 10px;
+}
+
+ul ul{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: .5s;
+    margin:0;
+}
+
+ul li li{
+    padding: 10px;
+    color: #814719;
+}
+
+button{
+    position: relative;
+    border: none;
+    width: 100%;
+    background-color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 20px;
+    font-size:1em;
+}
+
+button::before,
+button::after{
+    content:"";
+    position: absolute;
+    top: 47%;
+    width: 1.5px;
+    height: 8px;
+    background-color: #814719;
+    transition: .4s;
+}
+
+button::before{
+    transform: rotate(-45deg);
+    right: 35px;
+}
+
+button::after{
+    transform: rotate(45deg);
+    right: 30px;
+}
+
+li.active button::before{
+    transform: rotate(-135deg);
+    transition:.5s;
+}
+
+li.active button::after{
+    transform: rotate(135deg);
+    transition:.4s;
+}
+#question p{
+    width: 85%;
+    margin: 50px auto 0;
+}
+
+/********************************************************
+line
+**********************************************************/
+
+.line__list{
+    display: flex;
+    justify-content: center;
+    padding: 75px;
+    margin-bottom: 75px;
+}
+.line__item{
+    width: 30%;
+    margin: 0 35px;
+
+}
+.line__item__txt{
+    position: relative;
+}
+.line__item__txt p{
+    position: absolute;
+    top: 54%;
+    left: 46%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.line__item__img{
+    text-align: center;
+}
+.line__item img{
+    width: 80%;
+}
+
+
+/********************************************************
+news
+**********************************************************/
+/* 共通 */
+.sub__tittle{
+    position: relative;
+    padding: 5px 20px;
+    font-size: 2.3rem;
+}
+.sub__tittle::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    background: #71713D;
+    width: 7px;
+    height: 90%;
+}
+
+/* news */
+.news{
+    width: 85%;
+    margin: 0 auto 100px;
+}
+
+.news__list{
+    width: 90%;
+    margin: 40px auto 0;
+}
+.news__item{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted;
+}
+.news__day{
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+.news__tittle{
+    margin-left: 20px;
+}
+.news__link{
+    text-align: end;
+    margin-top: 40px;
+}
+.news__link a{
+    background: rgba(141, 141, 141, 0.3);
+    padding: 5px 20px;
+}
+
+/* ブログ */
+.blog{
+    width: 85%;
+    margin: 0 auto;
+}
+.blog__list{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+.blog__list{
+    width: 90%;
+}
+.blog__item{
+    padding: 0 10px;
+    width: 50%;
+}
+.blog__item img{
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.blog__item__txt{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.blog__day{
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+.blog__tittle{
+    font-weight: bold;
+    margin-top: 15px;
+}
+.blog__txt{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.blog__link{
+    margin-top: 70px;
+    text-align: end;
+}
+
+
+/********************************************************
+コンタクト
+**********************************************************/
+.contact{
+    background-image: url(img/contact_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 65px 0;
+}
+.contact__img img{
+    width: 13%;
+    margin: 0 auto;
+    display: block;
+}
+.contact__txt{
+    text-align: center;
+}
+.contact__txt p:nth-of-type(1){
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 70px 0 20px;
+    color: #44430D;
+}
+.contact__inner{
+    width: fit-content;
+    margin: 0 auto;
+}
+.contact__tel p:nth-of-type(1){
+    font-size: 3.0rem;
+    color: #44430D;
+
+}
+.contact__address{
+    display: flex;
+    margin-bottom: 5px;
+}
+.contact__address p{
+    color: #44430D;
+}
+.contact__address p:nth-of-type(1){
+    margin-right: 20px;
+}
+.contact__point{
+    text-align: end;
+}
+.contact__point p{
+    color: #44430D;
+}
+
+iframe{
+    width: 50%;
+    height: 250px;
+    display: block;
+    margin: 30px auto 0;
+}
+
+
+
+
+footer{
+    background-image: url(img/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+footer p{
+    text-align: center;
+    padding: 10px 0;
+}
+
+
