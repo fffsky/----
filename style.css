@@ -873,3 +873,108 @@ footer p{
     background-repeat: repeat;
     height: 800px;
 }
+
+
+
+/*******************************************
+ポップアップ
+********************************************/
+.popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s;
+}
+.popup-inner {
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 30px 50px;
+	background-color: rgb(168,156,137,0.9);
+	text-align: center;
+    z-index: 2;
+    height: 280px;
+}
+/* ポップアップテキスト */
+.popup p{
+	font-size: 1.6rem;
+	color: #fff;
+	line-height: 1.8;
+}
+.popup span{
+	writing-mode: vertical-rl;
+	font-size: 1.0rem;
+}
+.popup .popup-price1{
+	font-size: 1.8rem;
+	margin-top: 20px;
+}
+.popup .popup-price2{
+	font-size: 2.5rem;
+}
+ /* ポップアップリンク */
+.pop-link{
+	margin-top: 30px;
+}
+.popup a{
+	font-size: 1.6rem;
+    color: #666;
+    background-color: #fff;
+    border-radius: 50px;
+    line-height: 1.8;
+    padding: 10px 30px;
+}
+.popup.is-show {
+	opacity: 1;
+	visibility: visible;
+}
+/* ポップアップボタン */
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px 15px 0 0;
+}
+.popup-btn span {
+    position: absolute;
+    display: block;
+    left: 6px;
+    top: 15px;
+    width: 18px;
+    height: 2px;
+	background-color: #A89C89;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+.popup-btn span:nth-child(1) {
+	transform: translateY(0px)  rotate(-230deg);
+}
+.popup-btn span:nth-child(2) {
+	transform: translateY(0px)  rotate(-315deg);
+}
+/* 背景 */
+.black-background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+	background-color:rgb(102,102,102,0.5)
+}
