@@ -879,92 +879,6 @@ footer p{
 /*******************************************
 ポップアップ
 ********************************************/
-/* .popup {
-	position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    height: 280px;
-	z-index: 9999;
-	opacity: 0;
-	visibility: hidden;
-	transition: 1s;
-    background:rgba(6,198,85, 0.6);
-}
-.popup-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-
-}
-.popup__txt p{
-	font-size: 1.8rem;
-	color: #fff;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-.popup__txt img{
-	width: 120px;
-    height: 120px;
-    margin: 0 auto;
-    display: block;
-}
-
-.popup__txt a{
-    width: 80%;
-    margin: 15px auto;
-    display: block;
-	font-size: 1.6rem;
-    color: #000;
-    background: #fff;
-    border-radius: 50px;
-    padding: 3px 20px;
-}
-
-
-.popup.is-show {
-	opacity: 1;
-	visibility: visible;
-}
-
-.close-btn {
-    position: absolute;
-    right: 0;
-    top: 7px;
-    width: 30px;
-    height: 30px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    background: #fff;
-    border-radius: 50%;
-    margin: 10px 15px 0 0;
-}
-.popup-btn span {
-    position: absolute;
-    display: block;
-    left: 6px;
-    top: 15px;
-    width: 18px;
-    height: 2px;
-	background: #000;
-    transition: all 0.5s;
-    border-radius: 4px;
-}
-.popup-btn span:nth-child(1) {
-	transform: translateY(0px)  rotate(-230deg);
-}
-.popup-btn span:nth-child(2) {
-	transform: translateY(0px)  rotate(-315deg);
-} */
-
-
-body.open_popup {
-    overflow: hidden;
-}
 
 .bg_onetime_popup {
     position: fixed;
@@ -973,9 +887,11 @@ body.open_popup {
     z-index: 9999;
     width: 100vw;
     height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.5); */
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s;
+    transition: 0.6s;
+
 }
 
 body.open_popup .bg_onetime_popup {
@@ -990,6 +906,7 @@ body.open_popup .bg_onetime_popup {
     width: 300px;
     height: 280px;
     background-color: #fff;
+    border: 1px solid #c6c6c6;
 }
 
 .onetime_popup_title {
