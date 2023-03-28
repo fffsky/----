@@ -5,7 +5,7 @@ body{
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
-    background: #FFFBEC;
+    /* background: #FFFBEC; */
     font-family: 'Noto Serif JP', serif;
 }
 p{
@@ -40,7 +40,21 @@ header
     z-index: 9999;
 }
 
-
+header nav{
+    position: absolute;
+    top: 50px;
+    right: 5%;
+    width: fit-content;
+    font-size: 1.6rem;
+    z-index: 999;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    margin-left: 15px;
+    color: #fff;
+}
 /********************************************************
 全体設定
 **********************************************************/
@@ -51,20 +65,21 @@ header
 }
 
 .title{
-    /* background-image: url(img/bg.png);
-    background-size: cover;
-    background-position: center; */
     padding: 15px 0;
     text-align: center;
-    margin: 50px 0;
+    margin: 50px;
 }
 .title h2{
     color: #71713D;
-    font-weight: bold;
-    font-size: 3.0rem;
+    font-size: 4.0rem;
 }
 
 
+
+.bg{
+    height: 450px;
+    object-fit: cover;
+}
 /********************************************************
 ハンバーガーメニュー
 **********************************************************/
@@ -124,51 +139,22 @@ header
 /* テキスト */
 .fv__txt{
     position: absolute;
-    top : 55%;
-    left: 10%;
-    width: 100%;
-    color: #fff;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
 }
-.fv__txt h3{
-    font-weight: bold;
-    margin: 0;
-    border-bottom: 2px solid;
-    width: fit-content;
-    font-size: 1.8rem;
+.fv__txt p{
     color: #fff;
+    text-align: center;
 }
 .fv__txt p:nth-of-type(1){
-    font-weight: bold;
-    margin: 10px 0 ;
-    font-size: 3.0rem;
-    color: #fff;
+    font-size: 6.0rem;
 }
-.fv__txt p:nth-of-type(2){
-    margin: 0;
-    font-weight: bold;
-    color: #fff;
+    .fv__txt p:nth-of-type(2){
+    font-size: 2.0rem;
 }
-.fv nav img{
-    display: block;
-    height: 10px;
-}
-.fv nav{
-    position: absolute;
-    bottom: 15%;
-    left: 50px;
-}
-.fv nav ul{
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px 0;
-}
-.fv nav ul li{
-    margin:0 20px;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 100;
-}
+
 /********************************************************
 酵素風呂のコンセプト
 **********************************************************/
@@ -204,18 +190,20 @@ header
 /********************************************************
 酵素風呂について
 **********************************************************/
-.message__list{
-    display: flex;
-    margin: 40px 0;
-}
+
 /* テキスト */
-.message__item__txt__inner{
-    width: 70%;
+.about__list{
+    width: 100%;
     padding: 0 35px;
     margin: 60px 0;
+    display: flex;
+}
+/* テキスト横幅 */
+.about__item__txt__inner{
+    width: 60%;
 }
 /* タイトル */
-.message__item__txt p:nth-of-type(1){
+.about__item__txt p:nth-of-type(1){
     margin: 20px 0;
     font-size: 2.2rem;
     border-bottom: 1px solid;
@@ -224,75 +212,54 @@ header
     color: #F89E34;
 }
 /* 説明文 */
-.message__item__txt p:nth-of-type(2){
+.about__item__txt p:nth-of-type(2){
     margin: 0 0 60px;
 }
 /* 画像 */
-.message__item__img{
-    width: 30%;
-    position: relative;
-    height: auto;
+.about__item__img{
+    width: 40%;
+    margin: 0 auto;
+    text-align: end;
+    padding: 50px 0;
 }
-.message__item__img img{
+.about__item__img img{
+    width: 80%;
+    height: auto;
     object-fit: cover;
-    padding: 0 30px;
 }
-.message__item__img__txt{
-    position: absolute;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%,0%);
-    height: auto;
-    font-size: 2.8rem;
-}
-.message__item__img__txt p{
-    color: #71713D;
-    font-weight: bold;
-    line-height: 2.0;
-
-}
-.message__item__img__txt p:nth-child(2){
-    margin-top: 30px;
-
-}
-
 /********************************************************
 酵素風呂の効果
 **********************************************************/
 .effect__title{
-    text-align: center;
-    margin: 20px 0;
+    text-align: start;
+    border-radius: 10px;
     font-size: 2.0rem;
+    width: fit-content;
+    background: #B29760;
+    padding: 5px 55px;
+    margin-bottom: 30px;
+}
+.effect__title p{
+    color: #fff;
 }
 .effect__list{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
 }
 /* コンテンツ */
 .effect__item{
-    width: 30%;
-    margin: 0 10px 50px;
+    padding: 0 10px;
 }
-/* 画像 */
-.effect__item img{
-    height: 200px;
-    margin: 0 auto;
-    display: block;
-    object-fit: cover;
-}
+
 /* タイトル */
-.effect__item p:nth-of-type(1){
+.effect__item{
     text-align: center;
     margin: 15px 0;
     font-weight: bold;
     font-size: 1.8rem;
-}
-/* 説明文 */
-.effect__item p:nth-of-type(2){
-    padding: 0 15px;
 }
 
 
@@ -301,60 +268,53 @@ header
 こだわり
 *********************************************************/
 /* コンテンツ */
-.pick__flex{
-    display: flex;
-}
+
 .pick__inner{
-    width: 70%;
-}
-.pick__list{
-    padding: 0 35px;
-}
-.pick__img__item{
-    margin: 0 0 45px;
-}
-/* 画像 */
-.pick__img__item__img{
-    width: 40%;
-}
-.pick__img__item__img img{
-    width: 75%;
-}
-/* テキスト */
-.pick__img__item__txt{
-    width: 100%;
-    margin: 25px 0 70px;
-    padding: 0 30px;
-}
-/* タイトル */
-.pick__img__item__txt h4{
-    font-size: 2.0rem;
-    color: #956c1d;
-    border-bottom: 2px solid;
-    width: fit-content;
-    line-height: 1.2;
-    margin: 15px 0;
-    font-weight: bold;
-}
-/* 説明文 */
-.pick__img__item__txt p{
-    color: #814719;
+    width: 80%;
+    margin: 0 auto;
 }
 
+/* 画像 */
+.pick__item{
+    display: flex;
+    align-items: center;
+}
+.pick__item__img{
+    width: 30%;
+    padding: 30px;
+}
+.pick__item__txt{
+    width: 70%;
+}
+.pick__item__txt h4{
+    color: #814719;
+    width: fit-content;
+    border-bottom: 1px solid;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pick__item__txt p{
+    
+}
 /********************************************************
 料金案内
 **********************************************************/
-/* メインタイトル */
-.price__inner{
-    display: flex;
+
+.price__mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: block;
 }
+
 .price__main__tittle{
+    margin-bottom: 15px;
     text-align: center;
-    font-size: 2.0rem;
-    margin: 0 0 30px;
-}
-.price__detail{
-    width: 70%;
 }
 /* 表 */
 .price__item{
@@ -370,16 +330,18 @@ header
 /* 表(左) */
 .price__tittle{
     font-size: 2.5rem;
-    color: #814719;
-    background: rgb(219, 219, 219);
+    background: #B29760;
     padding: 10px 20px;
     width: 150px;
+    color: #fff;
 }
 /* 表(右) */
 .price__marge{
     width: 350px;
     font-size: 2.5rem;
+    background: rgb(255, 255, 255);
     color: #814719;
+    padding: 10px 20px;
 }
 .price__marge span{
     font-size: 1.3rem;
@@ -452,11 +414,10 @@ header
 }
 /* 画像 */
 .photo__item img{
-    width: 21%;
+    width: 16%;
     height: 230px;
     object-fit: cover;
-    margin: 2%;
-    border-radius: 10px;
+    margin: 1px 10px;
 }
 /* instagram */
 .instagram__link{
@@ -480,7 +441,7 @@ header
 **********************************************************/
 
 .include-accordion{
-    width: 85%;
+    width: 70%;
     margin: 0 auto;
     padding: 0;
 }
@@ -559,7 +520,7 @@ line
 .line__list{
     display: flex;
     justify-content: center;
-    padding: 75px;
+    padding: 0 75px;
     margin-bottom: 75px;
 }
 .line__item{
@@ -653,31 +614,31 @@ news
     width: 90%;
 }
 .blog__item{
-    padding: 0 10px;
     width: 50%;
+    border: 1px solid #c6c6c6;
+    margin: 0 10px;
 }
 .blog__item img{
     height: 200px;
     object-fit: cover;
     display: block;
 }
-.blog__item__txt{
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-}
 
 .blog__day{
     font-size: 1.3rem;
     margin-top: 15px;
+    padding-left: 10px;
 }
 .blog__tittle{
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 5px;
+    padding: 0 10px;
+    font-size: 1.4rem;
 }
 .blog__txt{
     font-size: 1.3rem;
-    margin-top: 10px;
+    margin: 5px 0 10px;
+    padding: 0 10px;
 }
 
 .blog__link{
@@ -747,14 +708,134 @@ iframe{
 
 
 footer{
-    background-image: url(img/footer.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+    background: #B29760;
 }
 footer p{
     text-align: center;
     padding: 10px 0;
+    color: #fff;
 }
 
 
+.flow__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.flow__item{
+    width: 20%;
+    margin: 0 15px 50px;
+    position: relative;
+}
+.flow__item::before{
+    position: absolute;
+    content: "";
+    top: 35%;
+    right: -30px;
+    width: 20%;
+    height: 20px;
+    transform: translate(0,-50%);
+    background: rgba(149, 108, 29,0.2);
+    z-index: -1;
+}
+.flow__list .flow__item:nth-child(4):before{
+    background: transparent;
+}
+.flow__list .flow__item:nth-child(8):before{
+    background: transparent;
+}
+.flow__item__img::after{
+    position: absolute;
+    content: "";
+    top: 135px;
+    right: 13px;
+    width: 8%;
+    height: 43%;
+    background: #fff;
+    transform: rotate(45deg);
+
+}
+.flow__item__img{
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.flow__item__img img{
+    object-fit: cover;
+}
+.flow__num{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+.flow__num p{
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.3rem;
+}
+.flow__item__txt{
+    margin: 15px 0;
+}
+.flow__item__txt p:nth-of-type(1){
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.flow__item__txt p:nth-of-type(2){
+    font-size: 1.4rem;
+}
+
+
+
+
+.bg__img{
+    position: relative;
+    height: 900px;
+}
+.bg__img1{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    width: 65%;
+    height: 400px;
+}
+.bg__img2{
+    position: absolute;
+    top: 360px;
+    right: 120px;
+    width: 55%;
+    height: 390px;
+}
+.bg__img img{
+    object-fit: cover;
+}
+
+
+
+.parallax-bg1 {
+    background-image: url('img/home1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 800px;
+}
+
+.sns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.sns img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+}
