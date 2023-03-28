@@ -60,18 +60,18 @@ header nav ul li{
 **********************************************************/
 .container{
     width: 95%;
-    margin: 120px auto;
+    padding: 100px 0;
+    margin: 0 auto;
     max-width: 1300px;
 }
 
 .title{
-    padding: 15px 0;
     text-align: center;
-    margin: 50px;
 }
 .title h2{
     color: #71713D;
     font-size: 4.0rem;
+    margin-bottom: 70px;
 }
 
 
@@ -231,49 +231,33 @@ header nav ul li{
 酵素風呂の効果
 **********************************************************/
 .effect__title{
-    text-align: start;
     border-radius: 10px;
     font-size: 2.0rem;
     width: fit-content;
     background: #B29760;
     padding: 5px 55px;
-    margin-bottom: 30px;
+    margin: 20px auto 30px;
 }
 .effect__title p{
     color: #fff;
 }
 .effect__list{
     display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
+    justify-content: center;
 }
 /* コンテンツ */
 .effect__item{
-    padding: 0 10px;
+    padding: 0 15px;
+    font-size: 2.2rem;
 }
-
-/* タイトル */
-.effect__item{
-    text-align: center;
-    margin: 15px 0;
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-
 
 /********************************************************
 こだわり
 *********************************************************/
-/* コンテンツ */
-
-.pick__inner{
+.pick__list{
     width: 80%;
     margin: 0 auto;
 }
-
 /* 画像 */
 .pick__item{
     display: flex;
@@ -294,28 +278,102 @@ header nav ul li{
     margin-bottom: 10px;
     font-size: 2.0rem;
 }
-.pick__item__txt p{
-    
+
+
+/********************************************************
+ご利用の流れ
+**********************************************************/
+#flow{
+    background: #f6edcd;
 }
+.flow__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flow__item{
+    width: 20%;
+    margin: 0 15px 50px;
+    position: relative;
+}
+/* 背景の横棒 */
+.flow__item::before{
+    position: absolute;
+    content: "";
+    top: 35%;
+    right: -30px;
+    width: 20%;
+    height: 20px;
+    transform: translate(0,-50%);
+    background: rgba(149, 108, 29,0.2);
+    z-index: -1;
+}
+/* 4つ目の背景off */
+.flow__list .flow__item:nth-child(4+8):before{
+    background: transparent;
+}
+/* 8つ目の背景off */
+.flow__list .flow__item:nth-child(8):before{
+    background: transparent;
+}
+/* 画像 */
+.flow__item__img{
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.flow__item__img img{
+    object-fit: cover;
+}
+/* 画像の一部白色 */
+.flow__item__img::after{
+    position: absolute;
+    content: "";
+    top: 135px;
+    right: 13px;
+    width: 8%;
+    height: 43%;
+    background: #fff;
+    transform: rotate(45deg);
+}
+/* 数字 */
+.flow__num{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+.flow__num p{
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.3rem;
+    color: skyblue;
+}
+/* 説明 */
+.flow__item__txt{
+    margin: 15px 0;
+}
+.flow__item__txt p:nth-of-type(1){
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.flow__item__txt p:nth-of-type(2){
+    font-size: 1.4rem;
+}
+
+
 /********************************************************
 料金案内
 **********************************************************/
-
-.price__mask{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 999;
-    display: block;
-}
-
 .price__main__tittle{
     margin-bottom: 15px;
     text-align: center;
+    font-size: 2.0rem;
 }
 /* 表 */
 .price__item{
@@ -344,6 +402,7 @@ header nav ul li{
     color: #814719;
     padding: 10px 20px;
 }
+/* 税込み表示 */
 .price__marge span{
     font-size: 1.3rem;
 }
@@ -357,19 +416,15 @@ header nav ul li{
 
 /* ペア割 */
 .price__pair{
-    margin-bottom: 65px;
+    width: fit-content;
+    margin: 30px auto 65px;
 }
-.price__pair dl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 0;
-}
-.price__pair__tittle{
+
+.price__pair p:nth-of-type(1){
     color: red;
     font-size: 2.3rem;
 }
-.price__pair__marge{
+.price__pair p:nth-of-type(2){
     margin-left: 30px;
 }
 
@@ -396,7 +451,6 @@ header nav ul li{
     text-align: center;
     margin-top: 20px;
     font-size: 1.3rem;
-
 }
 
 
@@ -514,44 +568,9 @@ li.active button::after{
     margin: 50px auto 0;
 }
 
-/********************************************************
-line
-**********************************************************/
-
-.line__list{
-    display: flex;
-    justify-content: center;
-    padding: 0 75px;
-    margin-bottom: 75px;
-}
-.line__item{
-    width: 30%;
-    margin: 0 35px;
-
-}
-.line__item__txt{
-    position: relative;
-}
-.line__item__txt p{
-    position: absolute;
-    top: 54%;
-    left: 46%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.line__item__img{
-    text-align: center;
-}
-.line__item img{
-    width: 80%;
-}
-
 
 /********************************************************
-news
+お知らせ
 **********************************************************/
 /* 共通 */
 .sub__tittle{
@@ -582,14 +601,13 @@ news
 }
 .news__item{
     display: flex;
+    align-items: center;
     margin-bottom: 20px;
+    padding-bottom: 7px;
     border-bottom: 1px dotted;
 }
-.news__day{
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-}
 .news__tittle{
+    font-size: 2.0rem;
     margin-left: 20px;
 }
 .news__link{
@@ -610,8 +628,6 @@ news
     display: flex;
     justify-content: center;
     margin: 40px auto;
-}
-.blog__list{
     width: 90%;
 }
 .blog__item{
@@ -642,156 +658,97 @@ news
     padding: 0 10px;
 }
 
-.blog__link{
-    margin-top: 70px;
-    text-align: end;
+
+/********************************************************
+line
+**********************************************************/
+#line{
+    background: #f6edcd;
 }
+.line__item{
+    padding: 80px 0 0;
+    text-align: center;
+}
+.line__item p{
+    font-size: 3.0rem;
+}
+.line__link {
+    padding: 40px 0 80px;
+}
+.line__link img{
+    display: block;
+    width: 15%;
+    margin: 10px auto;
+}
+.line__item .line__link p{
+    font-size: 2.0rem;
+}
+
 
 
 /********************************************************
-コンタクト
+sns
 **********************************************************/
-.contact{
-    background-image: url(img/contact_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 65px 0;
-}
-.contact__img img{
-    width: 13%;
-    margin: 0 auto;
-    display: block;
-}
-.contact__txt{
+.sns p{
     text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
-.contact__txt p:nth-of-type(1){
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 70px 0 20px;
-    color: #44430D;
-}
-.contact__inner{
-    width: fit-content;
-    margin: 0 auto;
-}
-.contact__tel p:nth-of-type(1){
-    font-size: 3.0rem;
-    color: #44430D;
-
-}
-.contact__address{
-    display: flex;
-    margin-bottom: 5px;
-}
-.contact__address p{
-    color: #44430D;
-}
-.contact__address p:nth-of-type(1){
-    margin-right: 20px;
-}
-.contact__point{
-    text-align: end;
-}
-.contact__point p{
-    color: #44430D;
-}
-
-iframe{
-    width: 50%;
-    height: 250px;
-    display: block;
-    margin: 30px auto 0;
-}
-
-
-
-
-footer{
-    background: #B29760;
-}
-footer p{
-    text-align: center;
-    padding: 10px 0;
-    color: #fff;
-}
-
-
-.flow__list{
+.sns__icon{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    padding-bottom: 80px;
+}
 
-}
-.flow__item{
-    width: 20%;
-    margin: 0 15px 50px;
-    position: relative;
-}
-.flow__item::before{
-    position: absolute;
-    content: "";
-    top: 35%;
-    right: -30px;
-    width: 20%;
-    height: 20px;
-    transform: translate(0,-50%);
-    background: rgba(149, 108, 29,0.2);
-    z-index: -1;
-}
-.flow__list .flow__item:nth-child(4):before{
-    background: transparent;
-}
-.flow__list .flow__item:nth-child(8):before{
-    background: transparent;
-}
-.flow__item__img::after{
-    position: absolute;
-    content: "";
-    top: 135px;
-    right: 13px;
-    width: 8%;
-    height: 43%;
-    background: #fff;
-    transform: rotate(45deg);
-
-}
-.flow__item__img{
-    height: 200px;
-    object-fit: cover;
-    position: relative;
-    overflow: hidden;
-}
-.flow__item__img img{
-    object-fit: cover;
-}
-.flow__num{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+.sns__icon img{
+    display: block;
     width: 50px;
     height: 50px;
-    z-index: 100;
+    margin: 0 15px;
 }
-.flow__num p{
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 3.3rem;
-}
-.flow__item__txt{
-    margin: 15px 0;
-}
-.flow__item__txt p:nth-of-type(1){
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.flow__item__txt p:nth-of-type(2){
-    font-size: 1.4rem;
+/********************************************************
+map
+**********************************************************/
+iframe{
+    display: block;
+    width: 50%;
+    margin: 150px auto;
+    height: 300px;
 }
 
+/********************************************************
+footer
+**********************************************************/
+
+footer{
+    background: #f6edcd;
+    padding: 50px 50px 25px;
+}
+
+.footer__logo{
+    font-size: 4.0rem;
+    margin-bottom: 20px;
+}
+
+.footer__address{
+    margin-bottom: 10px;
+}
+.footer__tel{
+    margin-bottom: 10px;
+}
+
+
+.footer__open{
+    display: flex;
+}
+.footer__open p:nth-of-type(1){
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+.footer__copy{
+    text-align: center;
+}
 
 
 
@@ -826,17 +783,4 @@ footer p{
     background-size: cover;
     background-repeat: repeat;
     height: 800px;
-}
-
-.sns{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.sns img{
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 0 15px;
 }
