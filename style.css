@@ -973,3 +973,231 @@ body.open_popup .bg_onetime_popup {
     background:rgba(6,198,85, 1);
     color: #fff;
 }
+
+
+@media screen and (max-width:500px) {
+
+
+.pc{
+    display: none;
+}
+.sp{
+    display: block;
+}
+
+
+
+.container{
+    width: 90%;
+    padding: 45px 0;
+}
+
+
+.title h2{
+    
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+
+}
+
+
+
+
+/* header */
+.header__logo{
+    top: 20px;
+    left: 25px;
+    width: 13%;
+}
+
+/* fv */
+
+.fv__txt p:nth-of-type(1){
+    font-size: 3.5rem;
+}
+
+
+
+.order1{
+    order: 2;
+}
+
+.order2{
+    order: 1;
+}
+/* about */
+
+.about__list{
+    flex-direction: column;
+    padding: 0;
+}
+
+
+.about__item__img{
+    width: 100%;
+}
+
+.about__item__img img{
+    width: 100%;
+}
+
+
+.about__item__txt__inner{
+    width: 100%;
+}
+
+
+/* effect */
+.effect__item{
+    font-size: 1.6rem;
+    padding: 0 8px;
+}
+.effect__list{
+    flex-wrap: wrap;
+}
+
+
+
+/* pick */
+.pick__list{
+    width: 100%;
+}
+.effect__item{
+    width: 33%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pick__item{
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.pick__item__img{
+    width: 100%;
+    padding: 0;
+
+}
+
+.pick__item__txt{
+    width: 100%;
+}
+
+.pick__item__txt h4{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+/* flow */
+.flow__list{
+    flex-direction: column;
+}
+
+.flow__item{
+    width: 75%;
+    margin: 0 auto 30px;
+}
+
+
+.flow__item::before{
+    width: 0;
+    height: 0;
+}
+.flow__item__img::after{
+    width: 4%;
+    height: 46%;
+}
+
+/* price */
+.price__tittle{
+    width: 120px;
+    font-size: 1.8rem;
+}
+
+.price__marge{
+    width: 230px;
+    font-size: 1.8rem;
+}
+.price__pair p:nth-of-type(1){
+    font-size: 2rem;
+    margin-left: 30px;
+}
+
+
+
+/* photo */
+.instagram__link{
+    justify-content: center;
+}
+
+/* question */
+
+.include-accordion{
+    width: 100%;
+}
+#question p{
+    width: 100%;
+}
+
+/* news */
+
+.news{
+    width: 100%;
+}
+.news__tittle{
+    font-size: 1.6rem;
+}
+.blog{
+    width: 100%;
+}
+
+.blog__list{
+    flex-direction: column;
+}
+
+.blog__item{
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+
+
+/* line */
+.line__item p{
+    font-size: 1.8rem;
+}
+.line__link img{
+    width: 35%;
+}
+
+/* sns */
+.sns__icon a{
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+}
+
+/* map */
+iframe{
+    width: 80%;
+}
+
+
+/* footer */
+.footer__logo{
+    font-size: 2.5rem;
+}
+
+.footer__open{
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.footer__open p:nth-of-type(1){
+    margin-bottom: 5px;
+}
+
+
+
+}
