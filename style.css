@@ -801,7 +801,7 @@ map
 iframe{
     display: block;
     width: 50%;
-    margin: 150px auto;
+    margin: 0 auto;
     height: 300px;
 }
 
