@@ -9,26 +9,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+    <!-- JQ -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="header__logo">
             <img src="img/header_logo.png" alt="">
         </div>
         <nav>
             <ul>
-                <li>酵素風呂とは</li>
-                <li>こだわり</li>
-                <li>ご利用の流れ</li>
-                <li>料金案内</li>
-                <li>お知らせ</li>
-                <li>よくあるご質問</li>
+                <li><a href="#concept">酵素風呂とは</a></li>
+                <li><a href="#pick">こだわり</a></li>
+                <li><a href="#flow">ご利用の流れ</a></li>
+                <li><a href="#price">料金案内</a></li>
+                <li><a href="#news">お知らせ</a></li>
+                <li><a href="#question">よくあるご質問</a></li>
             </ul>
         </nav>
+    </header> -->
+    <header id="header">
+        <div class="header__logo">
+            <img src="img/header_logo.png" alt="">
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="#concept">酵素風呂とは</a></li>
+                <li><a href="#pick">こだわり</a></li>
+                <li><a href="#flow">ご利用の流れ</a></li>
+                <li><a href="#price">料金案内</a></li>
+                <li><a href="#news">お知らせ</a></li>
+                <li><a href="#question">よくあるご質問</a></li>
+            </ul>
+        </nav>
+        <nav id="navi">
+            <ul class="nav-menu">
+                <li><a href="#concept">酵素風呂とは</a></li>
+                <li><a href="#pick">こだわり</a></li>
+                <li><a href="#flow">ご利用の流れ</a></li>
+                <li><a href="#price">料金案内</a></li>
+                <li><a href="#news">お知らせ</a></li>
+                <li><a href="#question">よくあるご質問</a></li>
+            </ul>
+        </nav>
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mask"></div>
     </header>
+    
+
+    </div>
     <main>
         <!-- menu -->
         <div class="main_menu">
@@ -365,7 +403,7 @@
                 </div>
                 <div class="instagram__link">
                     <img src="img/ico_in.svg" alt="">
-                    <a href="">Follow us</a>
+                    <a href="https://www.instagram.com/" target="_blank">Follow us</a>
                 </div>
             </div>
         </section>
@@ -519,12 +557,24 @@
             <div id="sns" class="sns">
                 <p>-各種SNS-</p>
                 <div class="sns__icon">
-                    <img src="img/sns_instagram.png" alt="">
-                    <img src="img/sns_facebook.png" alt="">
-                    <img src="img/sns_twitter.png" alt="">
-                    <img src="img/sns_tiktok.png" alt="">
-                    <img src="img/sns_youtube.png" alt="">
-                    <img src="img/sns_line.png" alt="">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/sns_instagram.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/sns_facebook.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/sns_twitter.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/sns_tiktok.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/sns_youtube.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/sns_line.png" alt="">
+                    </a>
                 </div>
             </div>
         </section>
@@ -555,13 +605,14 @@
             <p>(電話受付は17時まで対応、休日：不定休)</p>
         </div>
         <div class="footer__copy">
-            <p>&copy;酵素風呂.</p>
+            <p>&copy;2023 酵素風呂 inc.</p>
         </div>
     </footer>
 
 
 <!-- js -->
-
+    <script src="js/hamburger.js"></script>
+   
     <script src="js/accordion.js"></script>
 </body>
 </html>
