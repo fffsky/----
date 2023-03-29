@@ -146,8 +146,8 @@ header{
 }
 .title h2{
     color: #71713D;
-    font-size: 4.0rem;
-    margin-bottom: 70px;
+    font-size: 3.2rem;
+    margin-bottom: 45px;
     font-weight: 100;
 }
 
@@ -393,9 +393,9 @@ header{
 .effect__title__inner::after{
     position: absolute;
     content: "";
-    top: 79%;
+    top: 19%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,0%);
     width: 63%;
     height: 120%;
     background: #fff;
@@ -518,6 +518,7 @@ header{
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 2.0rem;
 }
 .flow__item__txt p:nth-of-type(2){
     font-size: 1.4rem;
@@ -576,13 +577,21 @@ header{
     width: fit-content;
     margin: 30px auto 65px;
 }
-
+.price__pair span{
+    font-size: 1.3rem;
+}
 .price__pair p:nth-of-type(1){
     color: red;
     font-size: 2.3rem;
 }
+.price__pair p:nth-of-type(1) span{
+    color: #814719;
+}
 .price__pair p:nth-of-type(2){
     margin-left: 30px;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 10px;
 }
 
 .price__txt{
@@ -618,7 +627,10 @@ header{
 写真
 **********************************************************/
 #photo{
-    background: #fff2de;
+    background: #ede08d;
+}
+#photo h2{
+    color: #57571f;
 }
 /*
 .photo__item{
@@ -1008,7 +1020,7 @@ footer p{
 }
 
 .parallax-bg1 {
-    background-image: url('img/home1.jpg');
+    background-image: url('img/home.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -1189,7 +1201,6 @@ body.open_popup .bg_onetime_popup {
 
 
 .title h2{
-    
     font-size: 2.5rem;
     margin-bottom: 30px;
 
@@ -1285,6 +1296,7 @@ body.open_popup .bg_onetime_popup {
 .about__list{
     flex-direction: column;
     padding: 0;
+    margin: 0;
 }
 
 
@@ -1313,7 +1325,9 @@ body.open_popup .bg_onetime_popup {
 .effect__list{
     flex-wrap: wrap;
 }
-
+.effect__title{
+    margin: 0 auto 30px;
+}
 .effect__title__inner::after{
     top: 12%;
     transform: translate(-50%,0%);
@@ -1337,18 +1351,22 @@ body.open_popup .bg_onetime_popup {
 }
 
 .pick__item__img{
-    width: 65%;
+    width: 80%;
+    height: 175px;
     padding: 0;
-    margin: 0 auto 16px;
+    margin: 0 auto 16px 0;
 }
-
+.pick__item__img img{
+    object-fit: cover;
+}
 .pick__item__txt{
     width: 90%;
     margin: 0 auto;
 }
 
 .pick__item__txt h4{
-    margin: 10px auto 15px;
+    margin: 10px auto 15px 0;
+    font-weight: bold;
 }
 
 
@@ -1384,7 +1402,7 @@ body.open_popup .bg_onetime_popup {
     font-size: 1.8rem;
 }
 .price__pair{
-    width: 90%;
+    width: 75%;
 }
 .price__pair p:nth-of-type(1){
     font-size: 1.8rem;
@@ -1392,6 +1410,7 @@ body.open_popup .bg_onetime_popup {
 
 .price__pair p:nth-of-type(2){
     margin-left: 0;
+    font-size: 1.8rem;
 }
 .price__pair span{
     font-size: 1.3rem;
@@ -1486,5 +1505,13 @@ iframe{
 .footer__open p:nth-of-type(1){
     margin-bottom: 5px;
 }
+
+
+.parallax-bg1 {
+    height: 350px;
+}
+
+
+
 
 }
