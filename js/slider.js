@@ -1,5 +1,6 @@
 $(".slide-items").slick({
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 2500,
     slidesToShow:5,
     infinite:true,
     slidesToScroll:1,

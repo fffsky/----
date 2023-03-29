@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,11 +40,12 @@
 
 </head>
 <body>
+    <div id="js-pagetop">
+        <span></span>
+        <span></span>
+        <span>page top</span>
+    </div>
     <header id="header">
-        <div id="js-fixed-header" class="header is-fixed">
-            <img src="img/header_logo.png" alt="">
-            <p>酵素風呂専門店</p>
-        </div>
         <div class="header__logo">
             <a href="index.html">
                 <img src="img/header_logo.png" alt="">
@@ -61,7 +62,7 @@
             </ul>
         </nav>
         <nav id="navi">
-            <ul class="nav-menu">
+            <ul class="nav-menu sp">
                 <li><a href="#concept">酵素風呂とは</a></li>
                 <li><a href="#pick">こだわり</a></li>
                 <li><a href="#flow">ご利用の流れ</a></li>
@@ -70,11 +71,11 @@
                 <li><a href="#question">よくあるご質問</a></li>
             </ul>
         </nav>
-        <div class="toggle_btn">
+        <div class="toggle_btn sp">
             <span></span>
             <span></span>
         </div>
-        <div id="mask"></div>
+        <div id="mask sp"></div>
     </header>
 
     <!-- ポップアップ -->
@@ -127,7 +128,7 @@
 
 
         <!-- 酵素風呂について -->
-        <section class="about">
+        <section id="about">
             <div class="container">
                 <div class="title">
                     <h2>-酵素風呂とは-</h2>
@@ -153,29 +154,29 @@
                         <img src="img/home-about.jpg" alt="">
                     </div>
                 </div>
-                <div class="effect__title">
-                    <p>期待できる効果</p>
-                </div>
-                <div class="effect__list">
-                    <!-- コンテンツ1 -->
-                    <div class="effect__item">
-                        <p>氣を整える</p>
-                    </div>
-                    <!-- コンテンツ2 -->
-                    <div class="effect__item">
-                        <p>美肌効果</p>
-                    </div>
-                    <!-- コンテンツ3 -->
-                    <div class="effect__item">
-                        <p>ダイエット</p>
-                    </div>
-                    <!-- コンテンツ4 -->
-                    <div class="effect__item">
-                        <p>疲労回復</p>
-                    </div>
-                    <!-- コンテンツ3 -->
-                    <div class="effect__item">
-                        <p>体質改善</p>
+                <div class="effect__title__inner">
+                    <p class="effect__title">期待できる効果</p>
+                    <div class="effect__list">
+                        <!-- コンテンツ1 -->
+                        <div class="effect__item">
+                            <p>氣を整える</p>
+                        </div>
+                        <!-- コンテンツ2 -->
+                        <div class="effect__item">
+                            <p>美肌効果</p>
+                        </div>
+                        <!-- コンテンツ3 -->
+                        <div class="effect__item">
+                            <p>ダイエット</p>
+                        </div>
+                        <!-- コンテンツ4 -->
+                        <div class="effect__item">
+                            <p>疲労回復</p>
+                        </div>
+                        <!-- コンテンツ3 -->
+                        <div class="effect__item">
+                            <p>体質改善</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -537,7 +538,7 @@
                             </div>
                         </div>
                         <div class="news__link">
-                            <a href="">more →</a>
+                            <a href="news.html">more →</a>
                         </div>
                     </div>
                     <!-- ブログ -->
@@ -566,7 +567,7 @@
                             </div>
                         </div>
                         <div class="news__link">
-                            <a href="">more →</a>
+                            <a href="blog.html">more →</a>
                         </div>
                     </div>
                 </div>
@@ -644,7 +645,7 @@
 
 
 <!-- js -->
-    <script src="js/header.js"></script>
+    <script src="js/page-top.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/accordion.js"></script>
