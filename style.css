@@ -243,12 +243,16 @@ header
 酵素風呂のコンセプト
 **********************************************************/
 .concept{
-    margin: 100px auto ;
+    margin: 120px auto 100px;
     position: relative;
     max-width: 1300px;
 }
 /* 背景画像 */
 .concept__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 20%;
     margin: 0 auto;
 }
@@ -257,12 +261,7 @@ header
 }
 /* テキスト */
 .concept__txt{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 90%;
-
+    width: 100%;
 }
 .concept__txt p{
     letter-spacing: 2px;
@@ -547,22 +546,23 @@ header
 #photo{
     background: #f6edcd;
 }
+/*
 .photo__item{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-}
+} */
 /* 画像 */
-.photo__item img{
+/* .photo__item img{
     width: 16%;
     height: 230px;
     object-fit: cover;
     margin: 1px 10px;
-}
+} */
 /* instagram */
-.instagram__link{
+/* .instagram__link{
     display: flex;
     align-items: center;
     justify-content: end;
@@ -577,7 +577,64 @@ header
     display: block;
     width: fit-content;
     margin-left: 10px;
+} */
+
+
+  .slide-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .slide-items li {
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+
+  }
+  
+  .slide-items img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+  
+  .slick-dots {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* slick dots */
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '□';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    background-color: #000;
+    -webkit-font-smoothing: antialiased;
+    transform: rotate(90deg);
 }
+#pickup .slick-area li{
+    padding: 0 15px;
+}
+button::before, button::after{
+    background-color: transparent;
+}
+
+
 /********************************************************
 質問
 **********************************************************/
@@ -587,16 +644,16 @@ header
     margin: 0 auto;
     padding: 0;
 }
-.accordion__list{
+#question .accordion__list{
     margin: 20px 0;
 }
-.accordionBtn{
+#question .accordionBtn{
     color: #814719;
     border: 1px solid #814719;
     border-radius: 10px;
 }
 
-ul ul{
+#question ul ul{
     height: 0;
     padding: 0;
     overflow: hidden;
@@ -604,12 +661,14 @@ ul ul{
     margin:0;
 }
 
-ul li li{
+
+#question ul li li{
     padding: 10px;
     color: #814719;
 }
 
-button{
+
+#question button{
     position: relative;
     border: none;
     width: 100%;
@@ -620,8 +679,9 @@ button{
     font-size:1em;
 }
 
-button::before,
-button::after{
+
+#question button::before,
+#question button::after{
     content:"";
     position: absolute;
     top: 47%;
@@ -631,22 +691,26 @@ button::after{
     transition: .4s;
 }
 
-button::before{
+
+#question button::before{
     transform: rotate(-45deg);
     right: 35px;
 }
 
-button::after{
+
+#question button::after{
     transform: rotate(45deg);
     right: 30px;
 }
 
-li.active button::before{
+
+#question li.active button::before{
     transform: rotate(-135deg);
     transition:.5s;
 }
 
-li.active button::after{
+
+#question li.active button::after{
     transform: rotate(135deg);
     transition:.4s;
 }
@@ -975,6 +1039,18 @@ body.open_popup .bg_onetime_popup {
 }
 
 
+
+.pc{
+    display: block;
+}
+.sp{
+    display: none;
+}
+
+
+
+
+
 @media screen and (max-width:500px) {
 
 
@@ -988,7 +1064,7 @@ body.open_popup .bg_onetime_popup {
 
 
 .container{
-    width: 90%;
+    width: 100%;
     padding: 45px 0;
 }
 
@@ -1025,6 +1101,29 @@ body.open_popup .bg_onetime_popup {
 .order2{
     order: 1;
 }
+
+
+
+
+/* hamburger */
+.toggle_btn{
+    width: 70px;
+    height: 70px;
+    top: 0;
+    transform: translate(0,0);
+}
+
+/* concept */
+.concept__txt p{
+    font-size: 1.5rem;
+}
+
+.concept__img{
+    width: 40%;
+}
+
+
+
 /* about */
 
 .about__list{
@@ -1035,15 +1134,18 @@ body.open_popup .bg_onetime_popup {
 
 .about__item__img{
     width: 100%;
+    padding: 0;
 }
 
 .about__item__img img{
     width: 100%;
+    height: 250px;
 }
 
 
 .about__item__txt__inner{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 
@@ -1074,18 +1176,18 @@ body.open_popup .bg_onetime_popup {
 }
 
 .pick__item__img{
-    width: 100%;
+    width: 65%;
     padding: 0;
-
+    margin: 0 auto 16px;
 }
 
 .pick__item__txt{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .pick__item__txt h4{
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 10px auto 15px;
 }
 
 
@@ -1120,37 +1222,63 @@ body.open_popup .bg_onetime_popup {
     width: 230px;
     font-size: 1.8rem;
 }
+.price__pair{
+    width: 90%;
+}
 .price__pair p:nth-of-type(1){
-    font-size: 2rem;
-    margin-left: 30px;
+    font-size: 1.8rem;
 }
 
+.price__pair p:nth-of-type(2){
+    margin-left: 0;
+}
+.price__pair span{
+    font-size: 1.3rem;
+}
 
+.money img{
+    width: 55%;
+}
 
 /* photo */
 .instagram__link{
     justify-content: center;
 }
 
-/* question */
+.slide-items img{
+    height: 140px;
+}
 
+.slick-dots li button:before{
+    width: 10px;
+    height: 10px;
+    content: "";
+}
+/* question */
+#question .accordion__list{
+    width: 90%;
+    margin: 20px auto;
+}
 .include-accordion{
     width: 100%;
 }
 #question p{
-    width: 100%;
+    width: 88%;
+    font-size: 1.3rem;
 }
+
+
 
 /* news */
 
 .news{
-    width: 100%;
+    width: 90%;
 }
 .news__tittle{
     font-size: 1.6rem;
 }
 .blog{
-    width: 100%;
+    width: 90%;
 }
 
 .blog__list{

@@ -12,11 +12,32 @@
     <!-- JQ -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+   <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+
+    
+
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="style.css">
+
+
+        <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- JQ -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!-- CSS・JS -->
+        <link rel="stylesheet" href="style.css">
+
+
+
+
 </head>
 <body>
     <header id="header">
@@ -74,7 +95,10 @@
         </div>
         <!-- メインビジュアル -->
         <div class="fv">
-            <img src="img/home1.jpg" alt="">
+            <picture>
+                <source srcset="img/home1.jpg" media="(min-width: 500px)"/><!-- 幅768px以上なら表示 -->
+                <img src="img/sp_mv.jpg"><!-- それ以外で表示 -->
+            <picture>
             <div class="fv__txt">
                 <p>酵素風呂</p>
                 <p></p>
@@ -89,9 +113,9 @@
             </div>
             <!-- テキスト -->
             <div class="concept__txt">
-                <p>「」とは、人々の長寿を願い災難を払う舞とされています。<br>
-                    ここに来られるお客様お一人、お一人が酵素風呂を通じて、<br>本来の治癒力や、美と健康を手に入れていただき、<br>
-                    豊かな毎日を過ごしていただけるような魂＝（神）が喜び舞う<br>癒しのパワースポットになることを願っています。
+                <p>「」とは、<br class="sp">人々の長寿を願い災難を払う舞とされています。<br>
+                    ここに来られるお客様<br class="sp">お一人、お一人が酵素風呂を通じて、<br>本来の治癒力や、美と健康を手に入れていただき、<br>
+                    豊かな毎日を過ごしていただけるような<br class="sp">魂＝（神）が喜び舞う<br>癒しのパワースポットになることを願っています。
                 </p>
             </div>
         </section>
@@ -215,7 +239,7 @@
         </section>
 
         <!-- 画像スクロール -->
-        <section>
+        <section class="pc">
             <div class="parallax-bg1"></div>
         </section>
 
@@ -349,7 +373,7 @@
 
                 <div class="price__pair">
                     <p>ペア割</p>
-                    <p>2人以上のご利用で最大1,000円OFF（9:00～16:00対象）</p>
+                    <p>2人以上のご利用で最大1,000円OFF<span>（9:00～16:00対象）</span></p>
                 </div>
 
                 <!-- タイトル -->
@@ -374,7 +398,7 @@
 
                 <!-- テキスト -->
                 <div class="price__txt">
-                    <p>定期的に入浴していただくことで、新陳代謝を高め、酵素浴の良さを、<br>より実感していただけますようお得な回数券もご用意しております。</p>
+                    <p>定期的に入浴していただくことで、新陳代謝を高め、<br class="sp">酵素浴の良さを、<br class="pc">より実感していただけますよう<br class="sp">お得な回数券もご用意しております。</p>
                 </div>
 
                 <!-- タイトル -->
@@ -393,17 +417,18 @@
                 <div class="title">
                     <h2>-photo-</h2>
                 </div>
-                <div class="photo__item">
-                    <img src="img/photo1.jpg" alt="">
-                    <img src="img/photo2.jpg" alt="">
-                    <img src="img/photo3.jpg" alt="">
-                    <img src="img/photo4.jpg" alt="">
-                    <img src="img/photo5.jpg" alt="">
-                </div>
-                <div class="instagram__link">
+                <ul class="slide-items">
+                    <li><img src="img/photo1.jpg" alt=""></li>
+                    <li><img src="img/photo2.jpg" alt=""></li>
+                    <li><img src="img/photo3.jpg" alt=""></li>
+                    <li><img src="img/photo4.jpg" alt=""></li>
+                    <li><img src="img/photo5.jpg" alt=""></li>
+                    <li><img src="img/photo6.jpg" alt=""></li>
+                </ul>
+                <!-- <div class="instagram__link">
                     <img src="img/ico_in.svg" alt="">
                     <a href="https://www.instagram.com/" target="_blank">Follow us</a>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -470,7 +495,7 @@
         </section>
 
         <!-- 画像スクロール -->
-        <section>
+        <section class="pc">
             <div class="parallax-bg1"></div>
         </section>
 
@@ -618,5 +643,6 @@
     <script src="js/hamburger.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
