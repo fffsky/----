@@ -10,7 +10,7 @@ body{
 }
 p{
     font-weight: 100;
-    color: rgb(129, 71, 25);
+    color: #814719;
     margin: 0;
 }
 dl,dt,dd{
@@ -856,8 +856,10 @@ button::before, button::after{
     margin-top: 40px;
 }
 .news__link a{
-    background: rgba(141, 141, 141, 0.3);
+    background: transparent;
     padding: 5px 20px;
+    border: 1px solid #814719;
+    color: #814719;
 }
 
 /* ブログ */
@@ -1321,7 +1323,7 @@ body.open_popup .bg_onetime_popup {
 
 /* effect */
 .effect__item{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     padding: 0 8px;
 }
 .effect__list{
@@ -1419,7 +1421,7 @@ body.open_popup .bg_onetime_popup {
 }
 
 .money img{
-    width: 55%;
+    width: 70%;
 }
 
 /* photo */
@@ -1432,8 +1434,8 @@ body.open_popup .bg_onetime_popup {
 }
 
 .slick-dots li button:before{
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     content: "";
 }
 /* question */
@@ -1484,8 +1486,11 @@ body.open_popup .bg_onetime_popup {
 
 /* sns */
 .sns__icon a{
+    width: 25px;
+    height: 25px;
     margin: 0 10px;
 }
+
 
 /* map */
 iframe{
