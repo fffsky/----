@@ -32,21 +32,21 @@ a{
 header
 **********************************************************/
 
-.header__logo{
-    position: fixed;
-    top: 25px;
-    left: 45px;
-    width: 5%;
-    z-index: 9990;
-}
-
-#menu {
+header{
     position: absolute;
-    top: 50px;
-    right: 5%;
-    width: fit-content;
-    font-size: 1.6rem;
-    z-index: 999;
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.header__logo{
+    width: 70px;
+    height: 70px;
+    z-index: 9990;
 }
 #menu ul{
     display: flex;
@@ -71,11 +71,50 @@ header
     background: #ffffff;
     transform: scale(0, 1);
     transform-origin: left top;
-    transition: transform .3s;
+    transition: transform .6s;
   }
 #menu ul li a:hover::after {
     transform: scale(1, 1);
   }
+
+
+  .header {
+    width: 100%;
+    background: #F6EDCD;
+    display: flex;
+    align-items: flex-end;
+  }
+  .header img{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 10px 20px;
+  }
+  .header p{
+  margin-left: 20px;
+  padding-bottom: 15px;
+}
+  .header.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(0px);
+    opacity: 0;
+transition: transform 0.6s, opacity 0.6s;
+   } 
+  
+  .header.is-fixed.is-show {
+    transform: translateY(0);
+    opacity: 1;
+  } 
+
+
+
+
+
+
+
+
+
 /********************************************************
 全体設定
 **********************************************************/
@@ -1080,10 +1119,17 @@ body.open_popup .bg_onetime_popup {
 
 
 /* header */
+header{
+    background: #fff;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 800;
+}
 .header__logo{
-    top: 20px;
-    left: 25px;
-    width: 13%;
+    top: 14px;
+    left: 18px;
+    width: 50px;
 }
 
 /* fv */
