@@ -132,15 +132,15 @@ header{
   }
 
 
-
-
-  header.is-fixed {
-    background-color: rgba(127, 97, 59, 0.7);
-    position: fixed;
-    z-index: 9999;
-  }
-
-
+.header {
+  background: transparent;
+  position: fixed;
+  transition: background-color .8s;
+}
+/* ファーストビューを過ぎたあとのヘッダー */
+.header.transform {
+  background-color: #886746;
+}
 /********************************************************
 全体設定
 **********************************************************/
@@ -223,7 +223,8 @@ header{
     transition: all .5s;
     cursor: pointer;
     z-index: 9999;
-    background: rgba(113, 113, 61, 0.6);
+    background: transparent;
+    /* background: rgba(113, 113, 61, 0.6); */
   }
   .toggle_btn span {
     display: block;
@@ -232,7 +233,7 @@ header{
     transform: translate(-50%);
     width: 40px;
     height: 2px;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 4px;
     transition: all .5s;
   }
@@ -245,7 +246,7 @@ header{
   }
 
   .open .toggle_btn span {
-    background-color: #fff;
+    background-color: #000;
         left: 30%;
   }
   .open .toggle_btn span:nth-child(1) {
@@ -1240,6 +1241,10 @@ body.open_popup .bg_onetime_popup {
 
 /* header */
 
+header{
+    height: 65px;
+}
+
 .header__logo{
     top: 14px;
     left: 18px;
@@ -1249,13 +1254,16 @@ body.open_popup .bg_onetime_popup {
 
 /* fv */
 .fv{
-    height: auto;
+    height: 80vh;
 }
 .fv__txt p:nth-of-type(1){
     font-size: 3.5rem;
 }
 
-
+.fv img{
+    object-fit: cover;
+    object-position: -40px;
+}
 
 .order1{
     order: 2;
@@ -1269,6 +1277,10 @@ body.open_popup .bg_onetime_popup {
 
 
 /* hamburger */
+
+.header.transform .toggle_btn span{
+    background-color: #fff;
+  }
 .toggle_btn{
     width: 65px;
     height: 65px;
