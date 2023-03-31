@@ -45,7 +45,7 @@
         <span></span>
         <span>page top</span>
     </div>
-    <header id="header">
+    <header id="header" class="header">
         <div class="header__logo">
             <a href="index.html">
                 <img src="img/header_logo.png" alt="">
@@ -99,16 +99,18 @@
             <span></span>
         </div>
         <!-- メインビジュアル -->
+        <section>
         <div class="fv">
             <picture>
-                <source srcset="img/home1.jpg" media="(min-width: 500px)"/><!-- 幅768px以上なら表示 -->
-                <img src="img/sp_mv.jpg"><!-- それ以外で表示 -->
+                <source srcset="img/home1.jpg" media="(min-width: 500px)"/>
+                <img src="img/sp_mv.jpg">
             <picture>
             <div class="fv__txt">
                 <p>酵素風呂</p>
                 <p></p>
             </div>
         </div>
+    </section>
 
         <!-- コンセプト -->
         <section id="concept" class="concept">
@@ -645,6 +647,7 @@
 
 
 <!-- js -->
+    <script src="js/header.js"></script>
     <script src="js/page-top.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/popup.js"></script>
