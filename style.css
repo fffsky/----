@@ -139,8 +139,10 @@ header{
 }
 /* ファーストビューを過ぎたあとのヘッダー */
 .header.transform {
-  background-color: #886746;
+  background-color: rgba(136, 103, 70, 0.9);
 }
+
+
 /********************************************************
 全体設定
 **********************************************************/
@@ -916,6 +918,7 @@ line
 **********************************************************/
 #line{
     background: #fff2de;
+    padding: 40px 0;
 }
 .line__item{
     padding: 80px 0 0;
@@ -924,17 +927,7 @@ line
 .line__item p{
     font-size: 3.0rem;
 }
-.line__link {
-    padding: 40px 0 80px;
-}
-.line__link img{
-    display: block;
-    width: 15%;
-    margin: 10px auto;
-}
-.line__item .line__link p{
-    font-size: 2.0rem;
-}
+
 
 
 
@@ -1175,8 +1168,25 @@ body.open_popup .bg_onetime_popup {
 
 
 
+.reserve a{
+    display: block;
+    padding: 5px 0;
+    max-width: 250px;
+    border: 1px solid #000;
+    background: #555555;
+    color: #fff;
+    margin: 80px auto;
+    font-size: 2.3rem;
+    text-align: center;
 
+}
 
+.reserve a:hover{
+
+    background: #000000;
+    color: #fff;
+
+}
 
 
 
@@ -1262,7 +1272,6 @@ header{
 
 .fv img{
     object-fit: cover;
-    object-position: -40px;
 }
 
 .order1{
