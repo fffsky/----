@@ -13,74 +13,24 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <link rel="stylesheet" href="style.css">
-   <!-- js -->
+    <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
-
-    
-
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="style.css">
-
-
-        <!-- リセットCSS -->
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <!-- JQ -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <!-- CSS・JS -->
-        <link rel="stylesheet" href="style.css">
-
-
-
-
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- JQ -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- CSS・JS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="js-pagetop">
-        <span></span>
-        <span></span>
-        <span>page top</span>
-    </div>
-    <header id="header" class="header js-header">
-        <div class="header__logo">
-            <a href="index.html">
-                <img src="img/header_logo.png" alt="">
-            </a>
-        </div>
-        <nav id="menu" class="pc">
-            <ul>
-                <li><a href="#concept">酵素風呂とは</a></li>
-                <li><a href="#pick">こだわり</a></li>
-                <li><a href="#flow">ご利用の流れ</a></li>
-                <li><a href="#price">料金案内</a></li>
-                <li><a href="#news">お知らせ</a></li>
-                <li><a href="#question">よくあるご質問</a></li>
-                <li><a class="reserve" href="">予約はこちら</a></li>
-            </ul>
-        </nav>
-        <nav id="navi">
-            <ul class="nav-menu sp">
-                <li><a href="#concept">酵素風呂とは</a></li>
-                <li><a href="#pick">こだわり</a></li>
-                <li><a href="#flow">ご利用の流れ</a></li>
-                <li><a href="#price">料金案内</a></li>
-                <li><a href="#news">お知らせ</a></li>
-                <li><a href="#question">よくあるご質問</a></li>
-                <li><a href="">予約はこちら</a></li>
-            </ul>
-        </nav>
-        <div class="toggle_btn sp">
-            <span></span>
-            <span></span>
-        </div>
-        <div id="mask sp"></div>
-    </header>
-
-    <!-- ポップアップ -->
+    <!-- LINEポップアップ -->
     <div class="bg_onetime_popup">
         <div class="onetime_popup">
             <div class="onetime_popup_title">
@@ -93,154 +43,169 @@
             </div>
         </div>
     </div>
+    <!-- page top -->
+    <div id="js-pagetop">
+        <span></span>
+        <span></span>
+        <span>page top</span>
+    </div>
+
+
+<!-- header -->
+    <header id="header">
+        <!-- logo -->
+        <div class="header__logo">
+            <a href="index.html" class="header__name">
+                <img src="img/main_logo.png" alt="">
+                <div class="header__office">
+                    <p>REGALO</p>
+                    <p>HEALTH&BEAUTY</p>
+                </div>
+            </a>
+        </div>
+        <!-- menu -->
+        <nav id="menu" class="pc">
+            <ul>
+                <li><a href="#concept">ホームは</a></li>
+                <li><a href="#pick">酵素風呂とは</a></li>
+                <li><a href="#flow">こだわり</a></li>
+                <li><a href="#price">ご利用の流れ</a></li>
+                <li><a href="#news">料金案内</a></li>
+                <li><a href="#question">よくあるご質問</a></li>
+                <li><a class="reserve" href="">ご予約はこちら</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <!-- menu -->
-        <div class="main_menu">
-            <span></span>
-            <span></span>
-        </div>
-        <!-- メインビジュアル -->
-        <section class="mv js-mv">
-        <div class="fv">
-            <picture>
-                <source srcset="img/home1.jpg" media="(min-width: 500px)"/>
-                <img src="img/sp_mv.jpg">
-            <picture>
-            <div class="fv__txt">
-                <p>酵素風呂</p>
-                <p></p>
-            </div>
-        </div>
-    </section>
-
-        <!-- コンセプト -->
-        <section id="concept" class="concept">
-            <!-- 画像 -->
-            <div class="concept__img">
-                <img src="img/message_bg.png" alt="">
-            </div>
-            <!-- テキスト -->
-            <div class="concept__txt">
-                <p>「」とは、<br class="sp">人々の長寿を願い災難を払う舞とされています。<br>
-                    ここに来られるお客様<br class="sp">お一人、お一人が酵素風呂を通じて、<br>本来の治癒力や、美と健康を手に入れていただき、<br>
-                    豊かな毎日を過ごしていただけるような<br class="sp">魂＝（神）が喜び舞う<br>癒しのパワースポットになることを願っています。
-                </p>
+        <!-- fv -->
+        <section>
+            <div class="fv">
+                <div class="fv__bg"></div>
+                <picture>
+                    <source srcset="img/step4.jpg" media="(min-width: 500px)"/>
+                    <img src="img/sp_mv.jpg">
+                <picture>
+                <div class="fv__menu">
+                    <p>新着情報</p>
+                    <p>2023.01.01</p>
+                    <p>ここにメニュータイトル</p>
+                </div>
             </div>
         </section>
 
+        <!-- topic -->
+        <section>
+            <div class="container">
+                <div class="topic__list">
+                    <div class="topic__item">
+                    </div>
+                    <div class="topic__item">
+                    </div>
+                    <div class="topic__item">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- キャッチコピー -->
+        <section>
+            <div class="container">
+                <div class="main__copy">
+                    <p>ここにテキスト</p>
+                    <p>短めに3行くらいで</p>
+                    <p>入力します</p>
+                </div>
+            </div>
+        </section>
 
         <!-- 酵素風呂について -->
         <section id="about">
             <div class="container">
-                <div class="title">
-                    <h2>-酵素風呂とは-</h2>
-                </div>
-                <div class="about__list">
-                    <!-- テキスト -->
-                    <div class="about__item__txt__inner order1">
-                        <!-- コンテンツ1 -->
-                        <div class="about__item__txt">
-                            <p>酵素風呂とは</p>
-                            <p>天然の微生物の働きによる発酵熱だけを利用した温浴法です。浴槽に敷き詰められた、ぬか床の中に身体全体を沈め、深いリラクゼーション効果を得て身体を芯から温めます。酵素浴、酵素風呂などと言われ、美容・健康目的で多くの方に親しまれています。
-                            </p>
-                        </div>
-                        <!-- コンテンツ2 -->
-                        <div class="about__item__txt">
-                            <p>酵素風呂</p>
-                            <p>静電三法の理論から独自の開発で出来上がったものが当店の酵素風呂です。漢方上薬のエネルギーを持った大理石を床の底に敷き酵素と混ぜ合わせ、米ぬか・檜パウダー・酒粕等を発酵させた氣が高いエネルギーを持つ当店自慢の酵素風呂です。
-                            </p>
-                        </div>
+                <div class="about__inner">
+                    <div class="about__txt">
+                        <p>酵素風呂とは</p>
+                        <p>ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。ここにテキスト入力します。</p>
                     </div>
-                    <!-- 画像 -->
-                    <div class="about__item__img order2">
-                        <img src="img/home-about.jpg" alt="">
-                    </div>
-                </div>
-                <div class="effect__title__inner">
-                    <p class="effect__title">期待できる効果</p>
-                    <div class="effect__list">
-                        <!-- コンテンツ1 -->
-                        <div class="effect__item">
-                            <p>氣を整える</p>
-                        </div>
-                        <!-- コンテンツ2 -->
-                        <div class="effect__item">
-                            <p>美肌効果</p>
-                        </div>
-                        <!-- コンテンツ3 -->
-                        <div class="effect__item">
-                            <p>ダイエット</p>
-                        </div>
-                        <!-- コンテンツ4 -->
-                        <div class="effect__item">
-                            <p>疲労回復</p>
-                        </div>
-                        <!-- コンテンツ3 -->
-                        <div class="effect__item">
-                            <p>体質改善</p>
-                        </div>
+                    <div class="about__img">
+                        <img src="img/home-price.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- こだわり -->
-        <section id="pick">
+        <!-- 特徴・こだわり -->
+        <section id="features">
             <div class="container">
                 <div class="title">
-                    <h2>-こだわり-</h2>
+                    <h2>FEATURES</h2>
+                    <p>当店のこだわり</p>
                 </div>
-                <div class="pick__list">
-                    <!-- コンテンツ1 -->
-                    <div class="pick__item">
-                        <div class="pick__item__img">
-                            <img src="img/pick1.jpg" alt="">
+                <div class="features__list">
+                    <div class="features__item">
+                        <div class="features__item__num">
+                            <p>1</p>
                         </div>
-                        <div class="pick__item__txt">
-                            <h4>米ぬか</h4>
-                            <p>日本有数の米どころ富山。山々からの雪解け水は、ミネラルを含み、豊かな大地の恵みが凝縮された、お米から摂れる富山の良質な米ぬかを使用。</p>
+                        <div class="features__item__img">
                         </div>
-                    </div>
-                    <!-- コンテンツ2 -->
-                    <div class="pick__item">
-                        <div class="pick__item__img">
-                            <img src="img/pick2.jpg" alt="">
-                        </div>
-                        <div class="pick__item__txt">
-                            <h4>ヒノキ</h4>
-                            <p>直接肌に触れるものだから厳選を重ねたヒノキパウダーを使用。赤ちゃんも安心の肌触りです。鎮静・殺菌作用に優れています。</p>
+                        <div class="features__item__txt">
+                            <p class="features__item__txt__tittle">こだわりタイトル</p>
+                            <p class="features__item__txt__detail">ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文</p>
                         </div>
                     </div>
-                    <!-- コンテンツ3 -->
-                    <div class="pick__item">
-                        <div class="pick__item__img">
-                            <img src="img/pick3.jpg" alt="">
+                    <div class="features__item">
+                        <div class="features__item__num">
+                            <p>2</p>
                         </div>
-                        <div class="pick__item__txt">
-                            <h4>酒粕</h4>
-                            <p>富山の老舗蔵元より仕入れた上質な酒粕を使用。美肌・美白効果や、新陣代謝を促進させる成分が豊富です。</p>
+                        <div class="features__item__img">
                         </div>
-                    </div>
-                    <!-- コンテンツ4 -->
-                    <div class="pick__item">
-                        <div class="pick__item__img">
-                            <img src="img/pick4.jpg" alt="">
-                        </div>
-                        <div class="pick__item__txt">
-                            <h4>GP酵素エキス</h4>
-                            <p>30種類以上の草に神農本草経の高いエネルギーをかけて発酵させます。そして。半年から1年という年月をかけて完成されたものがGP酵素エキスです</p>
+                        <div class="features__item__txt">
+                            <p class="features__item__txt__tittle">こだわりタイトル</p>
+                            <p class="features__item__txt__detail">ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文</p>
                         </div>
                     </div>
-                    <!-- コンテンツ5 -->
-                    <div class="pick__item">
-                        <div class="pick__item__img">
-                            <img src="img/pick5.jpg" alt="">
+                    <div class="features__item">
+                        <div class="features__item__num">
+                            <p>3</p>
                         </div>
-                        <div class="pick__item__txt">
-                            <h4>フォンダンウオーター</h4>
-                            <p>では、美と健康を追求し、入浴前後の水分補給には無添加のドライフルーツと天然のミネラルを豊富に含んだ水で作ったフォンダンウォーターをお出ししています。（デトックスウオーターとも言われています。）肌と体が喜ぶ『美・果・意・識』どうぞご体感ください。</p>
+                        <div class="features__item__img">
+                        </div>
+                        <div class="features__item__txt">
+                            <p class="features__item__txt__tittle">こだわりタイトル</p>
+                            <p class="features__item__txt__detail">ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <div class="features__item__num">
+                            <p>4</p>
+                        </div>
+                        <div class="features__item__img">
+                        </div>
+                        <div class="features__item__txt">
+                            <p class="features__item__txt__tittle">こだわりタイトル</p>
+                            <p class="features__item__txt__detail">ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <div class="features__item__num">
+                            <p>5</p>
+                        </div>
+                        <div class="features__item__img">
+                        </div>
+                        <div class="features__item__txt">
+                            <p class="features__item__txt__tittle">こだわりタイトル</p>
+                            <p class="features__item__txt__detail">ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <div class="features__item__num">
+                            <p>6</p>
+                        </div>
+                        <div class="features__item__img">
+                        </div>
+                        <div class="features__item__txt">
+                            <p class="features__item__txt__tittle">こだわりタイトル</p>
+                            <p class="features__item__txt__detail">ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文ここにこだわり本文</p>
                         </div>
                     </div>
                 </div>
@@ -256,102 +221,79 @@
         <section id="flow">
             <div class="container">
                 <div class="title">
-                    <h2>-ご利用の流れ-</h2>
+                    <h2>HOW TO BATH</h2>
+                    <p>ご利用の流れ</p>
                 </div>
                 <div class="flow__list">
                     <div class="flow__item">
                         <div class="flow__item__img">
                             <img src="img/step1.jpg" alt="">
-                            <div class="flow__num">
-                                <p>01</p>
-                            </div>
                         </div>
                         <div class="flow__item__txt">
-                            <p>受付・カウンセリング</p>
-                            <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p>01.受付・カウンセリング</p>
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
-                        <div class="flow__item__img">
+                        <div class="flow__item__img order2">
                             <img src="img/step2.jpg" alt="">
-                            <div class="flow__num">
-                                <p>02</p>
-                            </div>
                         </div>
-                        <div class="flow__item__txt">
-                            <p>入浴</p>
+                        <div class="flow__item__txt order1">
+                            <p>02.ご準備</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
                         <div class="flow__item__img">
                             <img src="img/step3.jpg" alt="">
-                            <div class="flow__num">
-                                <p>03</p>
-                            </div>
                         </div>
                         <div class="flow__item__txt">
-                            <p>お着替え</p>
+                            <p>03.お着替え</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
-                        <div class="flow__item__img">
+                        <div class="flow__item__img order2">
                             <img src="img/step4.jpg" alt="">
-                            <div class="flow__num">
-                                <p>04</p>
-                            </div>
                         </div>
-                        <div class="flow__item__txt">
-                            <p>ご入浴</p>
+                        <div class="flow__item__txt order1">
+                            <p>04.ご入浴</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
                         <div class="flow__item__img">
                             <img src="img/step5.jpg" alt="">
-                            <div class="flow__num">
-                                <p>05</p>
-                            </div>
                         </div>
                         <div class="flow__item__txt">
-                            <p>シャワー</p>
+                            <p>05.シャワー</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
-                        <div class="flow__item__img">
+                        <div class="flow__item__img order2">
                             <img src="img/step6.jpg" alt="">
-                            <div class="flow__num">
-                                <p>06</p>
-                            </div>
                         </div>
-                        <div class="flow__item__txt">
-                            <p>休憩室でリラックス</p>
+                        <div class="flow__item__txt order1">
+                            <p>06.休憩室でリラックス</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
                         <div class="flow__item__img">
                             <img src="img/step7.jpg" alt="">
-                            <div class="flow__num">
-                                <p>07</p>
-                            </div>
                         </div>
                         <div class="flow__item__txt">
-                            <p>パウダールーム</p>
+                            <p>07.パウダールーム</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
                     <div class="flow__item">
-                        <div class="flow__item__img">
+                        <div class="flow__item__img order2">
                             <img src="img/step8.jpg" alt="">
-                            <div class="flow__num">
-                                <p>08</p>
-                            </div>
                         </div>
-                        <div class="flow__item__txt">
-                            <p>お着替え</p>
+                        <div class="flow__item__txt order1">
+                            <p>08.お着替え</p>
                             <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
                         </div>
                     </div>
@@ -363,298 +305,225 @@
         <section id="price">
             <div class="container">
                 <div class="title">
-                    <h2>-Menu-</h2>
+                    <h2>MENU & PRICE</h2>
+                    <p>メニュー・料金について</p>
                 </div>
-                <!-- タイトル -->
-                <p class="price__main__tittle">-通常料金-</p>
-                <!-- 表 -->
-                <div class="price__item">
-                    <dl>
-                        <dt class="price__tittle">女性</dt>
-                        <dt class="price__marge">4,950円<span>（税込み）</span></dt>
-                    </dl>
-                    <hr class="border">
-                    <dl>
-                        <dt class="price__tittle">男性</dt>
-                        <dt class="price__marge">5,500円<span>（税込み）</span></dt>
-                    </dl>
-                </div>
+                <div class="price__list price__inner">
+                    <div class="price__txt__inner">
+                        <div class="price__txt__item">
+                            <p>通常料金</p>
+                            <p>1回</p>
+                            <p>8,000円</p>
+                        </div>
+                        <hr class="price__txt__inner__line">
+                        <div class="price__txt__item">
+                            <p>回数券</p>
+                            <p>3回</p>
+                            <p>8,000円</p>
+                        </div>
+                        <div class="price__txt__item">
+                            <p></p>
+                            <p>5回</p>
+                            <p>8,000円</p>
+                        </div>
+                        <div class="price__txt__item">
+                            <p></p>
+                            <p>10回</p>
+                            <p>8,000円</p>
+                        </div>
 
-                <div class="price__pair">
-                    <p>ペア割<span>（9:00～16:00対象）</span></p>
-                    <p>2人以上のご利用で最大1,000円OFF</p>
+                    </div>
+                    <div class="price__list price__img">
+                        <div class="price__img__inner">
+                            <p>お支払い</p>
+                            <img src="img/money.png" alt="">
+                            <p>各種クレジットカード・QRコードでの決済も可能です</p>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- タイトル -->
-                <p class="price__main__tittle">-回数券-</p>
-                <!-- 表 -->
-                <div class="price__item">
-                    <dl>
-                        <dt class="price__tittle">5回</dt>
-                        <dt class="price__marge">&nbsp;&nbsp;5,500円<span>（税込み）</span></dt>
-                    </dl>
-                    <hr class="border">
-                    <dl>
-                        <dt class="price__tittle">10回</dt>
-                        <dt class="price__marge">10,000円<span>（税込み）</span></dt>
-                    </dl>
-                    <hr class="border">
-                    <dl>
-                        <dt class="price__tittle">15回</dt>
-                        <dt class="price__marge">15,000円<span>（税込み）</span></dt>
-                    </dl>
-                </div>
-
-                <!-- テキスト -->
-                <div class="price__txt">
-                    <p>定期的に入浴していただくことで、新陳代謝を高め、<br class="sp">酵素浴の良さを、<br class="pc">より実感していただけますよう<br class="sp">お得な回数券もご用意しております。</p>
-                </div>
-
-                <!-- タイトル -->
-                <p class="price__main__tittle">-決済方法-</p>
-                <!-- 画像 -->
-                <div class="money">
-                    <img src="img/money.png" alt="">
-                    <p>当店のお支払については<br class="sp">クレジットカード・電子マネー・現金にて<br class="sp">ご利用いただけます。</p>
-                </div>
-            <div class="reserve">
-                <a href="">ご予約はこちら</a>
-            </div>
-        </div>
-        </section>
-
-        <!-- photo -->
-        <section id="photo">
-            <div class="container">
-                <div class="title">
-                    <h2>-Photo-</h2>
-                </div>
-                <ul class="slide-items">
-                    <li><img src="img/photo1.jpg" alt=""></li>
-                    <li><img src="img/photo2.jpg" alt=""></li>
-                    <li><img src="img/photo3.jpg" alt=""></li>
-                    <li><img src="img/photo4.jpg" alt=""></li>
-                    <li><img src="img/photo5.jpg" alt=""></li>
-                    <li><img src="img/photo6.jpg" alt=""></li>
-                </ul>
-                <!-- <div class="instagram__link">
-                    <img src="img/ico_in.svg" alt="">
-                    <a href="https://www.instagram.com/" target="_blank">Follow us</a>
-                </div> -->
             </div>
         </section>
-
-        
-        <!-- 画像スクロール -->
-        <section class="pc">
-            <div class="parallax-bg1"></div>
-        </section>
-        <!-- <section class="sp">
-            <img src="img/home.jpg" alt="">
-        </section> -->
 
         <!-- お知らせ -->
         <section id="news">
             <div class="container">
-                <div class="title">
-                    <h2>-お知らせ-</h2>
-                </div>
-                    <!-- お知らせ -->
-                    <div class="news">
-                        <div class="sub__tittle">
-                            <p>新着情報</p>
-                        </div>
-                        <div class="news__list">
-                            <div class="news__item">
-                                <p class="news__day">2023.04.01</p>
-                                <p class="news__tittle">GWの営業について</p>
-                            </div>
-                            <div class="news__item">
-                                <p class="news__day">2023.04.01</p>
-                                <p class="news__tittle">回数券の販売はじめました</p>
-                            </div>
-                            <div class="news__item">
-                                <p class="news__day">2023.04.01</p>
-                                <p class="news__tittle">リニューアルオープンしました</p>
-                            </div>
-                            <div class="news__item">
-                                <p class="news__day">2023.03.01</p>
-                                <p class="news__tittle">コロナ対策が変わりました</p>
-                            </div>
-                            <div class="news__item">
-                                <p class="news__day">2023.01.01</p>
-                                <p class="news__tittle">新年のご挨拶</p>
-                            </div>
-                        </div>
-                        <div class="news__link">
-                            <a href="news.html">more ></a>
-                        </div>
+                <div class="news__flex">
+                    <div class="title">
+                        <h2>NEWS</h2>
+                        <p>お知らせ</p>
                     </div>
-                    <!-- ブログ -->
-                    <div class="blog">
-                        <div class="sub__tittle">
-                            <p>スタッフblog</p>
+                    <div class="news__list">
+                        <div class="news__item">
+                            <p class="news__day">2023.04.01</p>
+                            <p class="news__tittle">GWの営業について</p>
                         </div>
-                        <div class="blog__list">
-                            <div class="blog__item">
-                                <img src="img/photo1.jpg" alt="">
-                                <p class="blog__day">2023.04.01</p>
-                                <p class="blog__tittle">4周年</p>
-                                <p class="blog__txt">ここにテキストがはいりますここにテキストが…</p>
-                            </div>
-                            <div class="blog__item">
-                                <img src="img/photo2.jpg" alt="">
-                                <p class="blog__day">2023.04.01</p>
-                                <p class="blog__tittle">14才の挑戦</p>
-                                <p class="blog__txt">ここにテキストがはいりますここにテキストが…</p>
-                            </div>
-                            <div class="blog__item">
-                                <img src="img/photo2.jpg" alt="">
-                                <p class="blog__day">2023.04.01</p>
-                                <p class="blog__tittle">新しいメンバーが増えました</p>
-                                <p class="blog__txt">ここにテキストがはいりますここにテキストが…</p>
-                            </div>
+                        <div class="news__item">
+                            <p class="news__day">2023.04.01</p>
+                            <p class="news__tittle">回数券の販売はじめました</p>
                         </div>
-                        <div class="news__link">
-                            <a href="blog.html">more ></a>
+                        <div class="news__item">
+                            <p class="news__day">2023.04.01</p>
+                            <p class="news__tittle">リニューアルオープンしました</p>
+                        </div>
+                        <div class="news__item">
+                            <p class="news__day">2023.03.01</p>
+                            <p class="news__tittle">コロナ対策が変わりました</p>
+                        </div>
+                        <div class="news__item">
+                            <p class="news__day">2023.01.01</p>
+                            <p class="news__tittle">新年のご挨拶</p>
                         </div>
                     </div>
                 </div>
+                <a class="news__link" href="">過去のお知らせ</a>
+            </div>
         </section>
 
-        <!-- 公式LINE -->
-        <section id="line">
-            <div class="line__item">
-                <p>お問い合わせ・ご予約は<br class="sp">24時間受付中</p>
-                <div class="reserve">
-                    <a href="">ご予約はこちら</a>
+        <!-- information -->
+        <section id="information">
+            <div class="information__list">
+                <div class="information__item">
+                    <img src="img/home-about.jpg" alt="">
+                    <div class="information__item__bg"></div>
+                    <div class="information__item__txt">
+                        <p>LINEでのご予約</p>
+                        <img src="img/info1.png" alt="">
+                        <a class="information__item__txt__link__line" href="">ご予約はこちら</a>
+                    </div>
+                </div>
+                <div class="information__item">
+                    <img src="img/home-price.jpg" alt="">
+                    <div class="information__item__bg"></div>
+                    <div class="information__item__txt">
+                        <p>お電話でのお問い合わせ</p>
+                        <img src="img/info2.png" alt="">
+                        <a class="information__item__txt__link__tel" href="">TEL:03-5689-9568</a>
+                        <p>営業時間 9:00～18:00<br>(電話受付は17時まで対応、休日：不定休)</p>
+                    </div>
+                </div>
+                <div class="information__item information__item3">
+                    <img src="img/info.png" alt="">
+                    <div class="information__item__bg"></div>
+                    <div class="information__item__txt">
+                        <p>アクセス</p>
+                        <img src="img/info3.png" alt="">
+                        <a class="information__item__txt__link__map" href="">Google Map</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- map -->
-        <section id="map">
+        <!-- 質問 -->
+        <section id="question">
             <div class="container">
                 <div class="title">
-                    <h2>-アクセス-</h2>
+                    <h2>Q & A</h2>
+                    <p>よくある質問</p>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d199.81514362234657!2d137.03073785330773!3d36.74555578598075!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff782d292c40b2f%3A0x16ce297b63b064bd!2z44CSOTMzLTAwMTQg5a-M5bGx55yM6auY5bKh5biC6YeO5p2R77yR77yT77yY4oiS77yR!5e0!3m2!1sja!2sjp!4v1559940359121!5m2!1sja!2sjp" width="100%" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="question__inner">
+                    <ul class="include-accordion scroll-control">
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">衛生的に問題はないですか？</button>
+                            <ul>
+                                <li>酵素は発酵した糠酵素で６０度くらいあり、低温殺菌状態となり、人に有害な細菌は死滅し、繁殖できません。<br>
+                                    又、お客様が入られる前に攪拌し、ぬか床の発酵を促進させ、温度を更に高めますので安心してお入りください。
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">酵素風呂で出た汗はどうなるのですか？</button>
+                            <ul>
+                                <li>酵素風呂に落ちた汗に混じった体内の老廃物や毒素は、酵素自体が分解してくれますので衛生上問題ございません</li>
+                            </ul>
+                        </li>
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">何を持っていけば良いですか？</button>
+                            <ul>
+                                <li>汗をかきますので、お着替えをご持参ください。<br>
+                                    （バスタオル一枚お渡しします）
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">入浴の間隔は？</button>
+                            <ul>
+                                <li>最初は間隔を空けずに１、２回定期的に入られると身体が良い状態になってきますので、あとは通いやすいペースで入られることをオススメいたします。</li>
+                            </ul>
+                        </li>
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">時間はどのくらいかかりますか？</button>
+                            <ul>
+                                <li>酵素風呂に入っていただく時間は約１５分です。<br>
+                                    カウンセリング・前後の着替え・シャワーを含め、約１時間です。
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">生理中でも入れますか？</button>
+                            <ul>
+                                <li>入浴可能です。ご自身の下着の上から紙ショーツを履いていただきます。</li>
+                            </ul>
+                        </li>
+                        <li class="accordion__list">
+                            <button class="accordionBtn" type="button">その他入れない人は？</button>
+                            <ul>
+                                <li>ペースメーカーを装着している方。重い血圧症。心臓病の方(医者にご相談の上、入浴になります）皮膚が化膿されている方。インフルエンザなど伝染病の方、飲酒されている方。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="question__doctor">※酵素風呂は、皆様の美と健康増進のお手伝いをするお店です。<br>
+                        健康に不安のお持ちの方は、必ず事前に担当医師にご相談いただいた上で、ご来店をお願いいたします。
+                    </p>
+                </div>
             </div>
         </section>
 
-<!-- 質問 -->
-<section id="question">
-    <div class="container">
-        <div class="title">
-            <h2>-よくあるご質問-</h2>
+        <!-- sns -->
+        <div id="sns" class="sns">
+            <div class="sns__icon">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/sns_instagram.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/sns_facebook.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/sns_twitter.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/sns_youtube.png" alt="">
+                </a>
+            </div>
         </div>
-        <ul class="include-accordion scroll-control">
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">衛生的に問題はないですか？</button>
-                <ul>
-                    <li>酵素は発酵した糠酵素で６０度くらいあり、低温殺菌状態となり、人に有害な細菌は死滅し、繁殖できません。<br>
-                        又、お客様が入られる前に攪拌し、ぬか床の発酵を促進させ、温度を更に高めますので安心してお入りください。
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">酵素風呂で出た汗はどうなるのですか？</button>
-                <ul>
-                    <li>酵素風呂に落ちた汗に混じった体内の老廃物や毒素は、酵素自体が分解してくれますので衛生上問題ございません</li>
-                </ul>
-            </li>
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">何を持っていけば良いですか？</button>
-                <ul>
-                    <li>汗をかきますので、お着替えをご持参ください。<br>
-                        （バスタオル一枚お渡しします）
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">入浴の間隔は？</button>
-                <ul>
-                    <li>最初は間隔を空けずに１、２回定期的に入られると身体が良い状態になってきますので、あとは通いやすいペースで入られることをオススメいたします。</li>
-                </ul>
-            </li>
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">時間はどのくらいかかりますか？</button>
-                <ul>
-                    <li>酵素風呂に入っていただく時間は約１５分です。<br>
-                        カウンセリング・前後の着替え・シャワーを含め、約１時間です。
-                    </li>
-                </ul>
-            </li>
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">生理中でも入れますか？</button>
-                <ul>
-                    <li>入浴可能です。ご自身の下着の上から紙ショーツを履いていただきます。</li>
-                </ul>
-            </li>
-            <li class="accordion__list">
-                <button class="accordionBtn" type="button">その他入れない人は？</button>
-                <ul>
-                    <li>ペースメーカーを装着している方。重い血圧症。心臓病の方(医者にご相談の上、入浴になります）皮膚が化膿されている方。インフルエンザなど伝染病の方、飲酒されている方。</li>
-                </ul>
-            </li>
-        </ul>
-        <p>酵素風呂は、皆様の美と健康増進のお手伝いをするお店です。<br>
-            健康に不安のお持ちの方は、必ず事前に担当医師にご相談いただいた上で、ご来店をお願いいたします。
-        </p>
-    </div>
-</section>
-
-
-
-<div id="sns" class="sns">
-    <div class="sns__icon">
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="img/sns_instagram.png" alt="">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="img/sns_facebook.png" alt="">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="img/sns_twitter.png" alt="">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="img/sns_youtube.png" alt="">
-        </a>
-    </div>
 
     </main>
 
-
-
-
-<!-- footer -->
+    <!-- footer -->
     <footer>
         <div class="footer__logo">
-            <p>酵素風呂</p>
+            <img src="img/logo.png" alt="">
         </div>
-        <div class="footer__address">
-            <p>富山県高岡市野村138-1</p>
-
-        </div>
-        <div class="footer__tel">
-            <p>TEL:00-0000-0000</p>
-        </div>
-        <div class="footer__open">
-            <p>営業時間 9:00～18:00</p>
-            <p>(電話受付は17時まで対応、休日：不定休)</p>
-        </div>
-        <div class="footer__copy">
-            <p>&copy;2023 酵素風呂 inc.</p>
+        <div class="footer__txt__inner">
+            <div class="footer__txt__item">
+                <p>富山県高岡市野村138-1</p>
+                <p>TEL:00-0000-0000</p>
+            </div>
+            <div class="footer__txt__item">
+                <p>営業時間 9:00～18:00</p>
+                <p>(電話受付は17時まで対応、休日：不定休)</p>
+            </div>
+            <div class="footer__copy">
+                <p>&copy;2023 酵素風呂 inc.</p>
+            </div>
         </div>
     </footer>
 
-
-<!-- js -->
-    <script src="js/header.js"></script>
-    <script src="js/page-top.js"></script>
-    <script src="js/hamburger.js"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/accordion.js"></script>
-    <script src="js/slider.js"></script>
-</body>
+    <!-- js -->
+        <script src="js/header.js"></script>
+        <script src="js/page-top.js"></script>
+        <script src="js/hamburger.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/slider.js"></script>
+    </body>
 </html>

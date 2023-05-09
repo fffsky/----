@@ -5,7 +5,6 @@ body{
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
-    /* background: #FFFBEC; */
     font-family: 'Noto Serif JP', serif;
 }
 p{
@@ -40,7 +39,7 @@ a{
     background: transparent;
     color: #fff;
     bottom: 25px;
-    right: 35px;
+    right: 5px;
     cursor: pointer;
     z-index: 9999;
   }
@@ -83,65 +82,36 @@ header
 **********************************************************/
 
 header{
-    position: absolute;
     width: 100%;
     height: 100px;
-    background: transparent;
-    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #E4E2D6;
     padding: 0 20px;
 }
-.header__logo{
-    width: 70px;
-    height: 70px;
-    z-index: 9990;
-}
-#menu{
-    flex: 1;
-}
-#menu ul{
+
+/* ロゴと社名を2分 */
+.header__name{
     display: flex;
-    justify-content: end;
+    align-items: center;
 }
-#menu ul li{
-    margin: 0 15px;
+/* 画像 */
+.header__name img{
+    width: 65px;
+    height: 65px;
 }
-#menu ul li a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-  }
-  
-#menu ul li a::after {
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background: #ffffff;
-    transform: scale(0, 1);
-    transform-origin: left top;
-    transition: transform .6s;
-  }
-#menu ul li a:hover::after {
-    transform: scale(1, 1);
-  }
-
-
-.header {
-  background: transparent;
-  position: fixed;
-  transition: background-color .8s;
+/* 社名 */
+.header__office{
+    padding-left: 15px;
 }
-/* ファーストビューを過ぎたあとのヘッダー */
-.header.transform {
-  background-color: rgba(136, 103, 70, 0.9);
+/* メニュー */
+header nav ul{
+    display: flex;
 }
-
+header nav ul li{
+    margin-left: 30px;
+}
 
 /********************************************************
 全体設定
@@ -150,706 +120,311 @@ header{
     width: 95%;
     padding: 100px 0;
     margin: 0 auto;
-    max-width: 1300px;
 }
 
 .title{
-    text-align: center;
+    padding-left: 20px;
+    width: fit-content;
 }
 .title h2{
-    color: #71713D;
-    font-size: 3.2rem;
-    margin-bottom: 45px;
-    font-weight: 100;
+    color: #C49E03;
+    font-size: 3.0rem;
+    margin-bottom: 5px;
 }
-
-
-
-.bg{
-    height: 450px;
-    object-fit: cover;
-}
-/********************************************************
-ハンバーガーメニュー
-**********************************************************/
-
-#navi {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -500px;
-    bottom: 0;
-    width: 500px;
-    color: #fff;
-    padding: 60px 25px;
-    background-color: #7A5741;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transition: all .5s;
-    z-index: 9999;
-    opacity: 0;
-  }
-  #navi a {
-    color: #fff;
-  }
-  .open #navi {
-    left: 0;
-    opacity: 1;
-  }
-  #navi ul {
-    margin: 0;
-    padding: 0;
-  }
-  #navi ul.nav-menu {
+.title p{
+    font-size: 1.8rem;
     margin-bottom: 60px;
-    border-top: solid 1px #fff;
-  }
-  #navi ul.nav-menu li {
-    position: relative;
-    margin: 0;
-    padding: 20px 0;
-    border-bottom: solid 1px #fff;
-  }
-  #navi ul.nav-menu li a {
-    padding: 0 30px;
-  }
-  .toggle_btn {
-    display: block;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translate(0,-50%);
-    width: 80px;
-    height: 80px;
-    transition: all .5s;
-    cursor: pointer;
-    z-index: 9999;
-    background: transparent;
-    /* background: rgba(113, 113, 61, 0.6); */
-  }
-  .toggle_btn span {
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    width: 40px;
-    height: 2px;
-    background-color: #000;
-    border-radius: 4px;
-    transition: all .5s;
-  }
-  .toggle_btn span:nth-child(1) {
-    top: 30px;
-  }
+    text-align: center;
+}
 
-  .toggle_btn span:nth-child(2) {
-    bottom: 30px;
-  }
-
-  .open .toggle_btn span {
-    background-color: #000;
-        left: 30%;
-  }
-  .open .toggle_btn span:nth-child(1) {
-    -webkit-transform: translateY(10px) rotate(-315deg);
-    transform: translateY(10px) rotate(-315deg);
-  }
-
-  .open .toggle_btn span:nth-child(2) {
-    -webkit-transform: translateY(-10px) rotate(315deg);
-    transform: translateY(-10px) rotate(315deg);
-  }
-  #mask {
-    display: none;
-    transition: all .5s;
-  }
-  .open #mask {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: .7;
-    z-index: 9998;
-    cursor: pointer;
-  }
-  
+#price .title p{
+    color: #fff;
+}
 /********************************************************
 メインビジュアル
 **********************************************************/
+/* 全全体の大きさ */
 .fv{
-
     position: relative;
+    height: calc( 100vh - 100px);
+
+    margin: 0 auto;
 }
+/* 画像サイズ拡大 */
 .fv img{
+    display: block;
+    object-fit: cover;
+    width: 90%;
+    margin: 0 auto;
 }
-/* テキスト */
-.fv__txt{
+
+/* 背景 */
+.fv__bg{
     position: absolute;
-    top : 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    background-color: #E4E2D6;
+    width: 100%;
+    height: 60vh;
+    z-index: -1;
+}
+
+
+/* テキスト */
+.fv__menu{
+    background: rgba(255, 255, 255,0.6);
+    position: absolute;
+    bottom : 40px;
+    left: 100px;
     z-index: 9990;
+    display: flex;
+    padding: 10px 30px;
 }
-.fv__txt p{
-    color: #fff;
-    text-align: center;
+.fv__menu p{
+    margin-right: 20px;
 }
-.fv__txt p:nth-of-type(1){
-    font-size: 6.0rem;
+.fv__menu p:nth-of-type(1){
+    color: rgb(194, 0, 0);
 }
-    .fv__txt p:nth-of-type(2){
-    font-size: 2.0rem;
+
+
+/********************************************************
+トピック
+**********************************************************/
+.topic__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic__item{
+    margin: 0 20px;
+    width: 30%;
+    height: 200px;
+    background: #c6c6c6;
 }
 
 /********************************************************
-酵素風呂のコンセプト
+キャッチコピー
 **********************************************************/
-
-.concept{
-    margin: 120px auto 100px;
-    position: relative;
-    max-width: 1300px;
-}
-/* 背景画像 */
-.concept__img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 20%;
-    margin: 0 auto;
-}
-.concept__img img{
-    object-fit: cover;
-}
-/* テキスト */
-.concept__txt{
-    width: 100%;
-}
-.concept__txt p{
-    letter-spacing: 2px;
-    line-height: 2.0;
-    font-size: 2.0rem;
+.main__copy{
     text-align: center;
+}
+
+.main__copy p{
+    font-size: 2.5rem;
+    line-height: 2;
 }
 
 /********************************************************
 酵素風呂について
 **********************************************************/
 #about{
-    background: #fff2de;
-}
-/* テキスト */
-.about__list{
+    position: relative;
     width: 100%;
-    padding: 0 35px;
-    margin: 60px 0;
+    overflow: hidden;
+    background-color: #E4E2D6;
+}
+#about .container{
+    width: 100%;
+}
+.about__inner{
     display: flex;
 }
-/* テキスト横幅 */
-.about__item__txt__inner{
-    width: 60%;
+.about__txt{
+    width: 50%;
 }
-/* タイトル */
-.about__item__txt p:nth-of-type(1){
-    margin: 20px 0;
-    font-size: 2.2rem;
-    border-bottom: 1px solid;
-    width: fit-content;
-    font-weight: bold;
-    color: #a06c04;
-}
-/* 説明文 */
-.about__item__txt p:nth-of-type(2){
-    margin: 0 0 60px;
-}
-/* 画像 */
-.about__item__img{
-    width: 40%;
-    margin: 0 auto;
-    text-align: end;
-    padding: 50px 0;
-}
-.about__item__img img{
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-}
-/********************************************************
-酵素風呂の効果
-**********************************************************/
-.effect__title__inner{
-    position: relative;
-    z-index: 1;
-}
-.effect__title{
-    color: #fff;
-    background: #B29760;
+.about__txt p:nth-of-type(1){
     text-align: center;
-    width: fit-content;
-    margin: 20px auto 30px;
-    border-radius: 10px;
-    font-size: 2.0rem;
-    padding: 5px 55px;
+    margin:20px 0 30px;
+    font-size: 2.8rem;
 }
-.effect__list{
-    position: relative;
+.about__txt p:nth-of-type(2){
+    text-align: center;
+    padding: 0 40px;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+.about__img{
+    width: 50%;
+    padding: 0 20px;
+}
+
+/********************************************************
+特徴・こだわり
+**********************************************************/
+.features__list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
-.effect__title__inner::after{
-    position: absolute;
-    content: "";
-    top: 19%;
-    left: 50%;
-    transform: translate(-50%,0%);
-    width: 63%;
-    height: 120%;
-    background: #fff;
-    border: 1px solid #5e4107;
-    z-index: -1;
-}
-/* コンテンツ */
-.effect__item{
-    padding: 0 15px;
-    font-size: 2.2rem;
-}
-
-/********************************************************
-こだわり
-*********************************************************/
-.pick__list{
-    width: 80%;
-    margin: 0 auto;
-}
-/* 画像 */
-.pick__item{
-    display: flex;
-    align-items: center;
-}
-.pick__item__img{
+.features__item{
     width: 30%;
-    padding: 30px;
+    margin: 0 auto 60px;
 }
-.pick__item__txt{
-    width: 70%;
+.features__item__num{
+    background: rgba(162, 77, 25,0.6);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
 }
-.pick__item__txt h4{
-    color: #814719;
-    width: fit-content;
-    border-bottom: 1px solid;
-    font-weight: bold;
-    margin-bottom: 10px;
+.features__item__num p{
+    line-height: 50px;
+    text-align: center;
     font-size: 2.0rem;
+    color: #fff;
 }
-
+.features__item__img{
+    background: #c6c6c6;
+    width: 100%;
+    height: 180px;
+    margin: 0 0 20px;
+}
+.features__item__txt__tittle{
+    text-align: center;
+    font-size: 2.0rem;
+    margin: 0 0 20px;
+}
 
 /********************************************************
 ご利用の流れ
 **********************************************************/
 #flow{
-    background: #fff2de;
+    background: #E4E2D6;
 }
 .flow__list{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
 }
 .flow__item{
-    width: 20%;
-    margin: 0 15px 50px;
-    position: relative;
-}
-/* 背景の横棒 */
-.flow__item::before{
-    position: absolute;
-    content: "";
-    top: 35%;
-    right: -30px;
-    width: 20%;
-    height: 20px;
-    transform: translate(0,-50%);
-    background: rgba(149, 108, 29,0.2);
-    z-index: -1;
-}
-/* 4つ目の背景off */
-.flow__list .flow__item:nth-child(4+8):before{
-    background: transparent;
-}
-/* 8つ目の背景off */
-.flow__list .flow__item:nth-child(8):before{
-    background: transparent;
+    display: flex;
+    align-items: start;
+    height: 300px;
+    margin-bottom: 80px;
 }
 /* 画像 */
 .flow__item__img{
-    height: 200px;
-    object-fit: cover;
-    position: relative;
-    overflow: hidden;
+    width: 50%;
+    height: 300px;
+    padding: 0 30px;
 }
 .flow__item__img img{
     object-fit: cover;
 }
-/* 画像の一部白色 */
-.flow__item__img::after{
-    position: absolute;
-    content: "";
-    top: 135px;
-    right: 13px;
-    width: 8%;
-    height: 43%;
-    background: #fff;
-    transform: rotate(45deg);
-}
-/* 数字 */
-.flow__num{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 50px;
-    height: 50px;
-    z-index: 100;
-}
-.flow__num p{
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 3.3rem;
-    color: skyblue;
-}
 /* 説明 */
 .flow__item__txt{
-    margin: 15px 0;
+    width: 50%;
+    padding: 50px 0 0;
 }
 .flow__item__txt p:nth-of-type(1){
-    font-weight: bold;
-    margin-bottom: 10px;
     text-align: center;
-    font-size: 2.0rem;
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+
 }
 .flow__item__txt p:nth-of-type(2){
-    font-size: 1.4rem;
+    margin: auto;
+    width: 90%;
 }
-
+.order1{
+    order: 1;
+}
+.order2{
+    order: 2;
+}
 
 /********************************************************
 料金案内
 **********************************************************/
-.price__main__tittle{
-    margin-bottom: 15px;
+#price{
+    background-image: url(img/home1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%
+}
+#price .title{
+    margin: 0 auto;
+}
+.price__list{
+    width: 50%;
+    margin: 0 auto;
+}
+.price__inner{
+    width: 100%;
+}
+.price__txt__inner{
+    margin: 0 auto;
+    width: fit-content;
+}
+.price__txt__item{
+    display: flex;
+    align-items: center;
+
+}
+.price__txt__item p{
+    color: #fff;
+    margin: 18px 0;
+}
+.price__txt__item p:nth-of-type(1){
+    width: 210px;
+    font-size: 3.6rem;
+}
+.price__txt__item p:nth-of-type(2){
+    width: 120px;
+    font-size: 3.3rem;
+
+}
+.price__txt__item p:nth-of-type(3){
+    font-size: 3.3rem;
+}
+.price__txt__inner__line{
+    border: 1px dotted #fff;
+    width: 100%;
+}
+.price__img__inner{
+    width: 65%;
+    margin: 60px auto;
+}
+.price__img img{
+    margin: 10px auto;
+    display: block;
+}
+.price__img p:nth-of-type(1){
     text-align: center;
     font-size: 2.0rem;
-}
-/* 表 */
-.price__item{
-    width: fit-content;
-    margin: 0 auto 20px;
-    border: 1px solid;
-}
-.price__item dl{
-    display: flex;
-    align-items:  baseline;
-    text-align: center;
-}
-/* 表(左) */
-.price__tittle{
-    font-size: 2.5rem;
-    background: #B29760;
-    padding: 10px 20px;
-    width: 150px;
+    font-weight: bold;
     color: #fff;
 }
-/* 表(右) */
-.price__marge{
-    width: 350px;
-    font-size: 2.5rem;
-    background: rgb(255, 255, 255);
-    color: #814719;
-    padding: 10px 20px;
-}
-/* 税込み表示 */
-.price__marge span{
-    font-size: 1.3rem;
-}
-/* 点線 */
-.border{
-    height: 0;
-    border: 0;
-    border-bottom: 1px dotted;
-    margin: 0;
-}
-
-/* ペア割 */
-.price__pair{
-    width: fit-content;
-    margin: 30px auto 65px;
-}
-.price__pair span{
-    font-size: 1.3rem;
-}
-.price__pair p:nth-of-type(1){
-    color: red;
-    font-size: 2.3rem;
-}
-.price__pair p:nth-of-type(1) span{
-    color: #814719;
-}
-.price__pair p:nth-of-type(2){
-    margin-left: 30px;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-top: 10px;
-}
-
-.price__txt{
+.price__img p:nth-of-type(2){
     text-align: center;
-    margin-top: 20px;
-    margin-left: 3%;
-    margin-bottom: 65px;
-    font-size: 1.3rem;
-
+    font-size: 1.4rem;
+    color: #fff;
 }
-
-
-/* 支払い */
-.money {
-    text-align: center;
-}
-.money img{
-    width: 40%;
-    margin: 0 auto;
-    display: block;
-}
-.money p{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.3rem;
-}
-
-
-
-
-
-/********************************************************
-写真
-**********************************************************/
-#photo{
-    background: #ECECE7;
-}
-#photo h2{
-    color: #57571f;
-}
-/*
-.photo__item{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-} */
-/* 画像 */
-/* .photo__item img{
-    width: 16%;
-    height: 230px;
-    object-fit: cover;
-    margin: 1px 10px;
-} */
-/* instagram */
-/* .instagram__link{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin: 15px 30px;
-}
-.instagram__link img{
-    width: 40px;
-    height: 40px;
-}
-.instagram__link a{
-    width: 16px;
-    display: block;
-    width: fit-content;
-    margin-left: 10px;
-} */
-
-
-  .slide-items {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
-  
-  .slide-items li {
-    height: auto;
-    margin-right: 10px;
-    margin-left: 10px;
-
-  }
-  
-  .slide-items img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-  }
-  
-  .slick-prev:before,
-  .slick-next:before {
-    color: black;
-  }
-  
-  .slick-dots {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  /* slick dots */
-.slick-dots li button:before {
-    font-family: 'slick';
-    font-size: 10px;
-    line-height: 20px;
-    position: absolute;
-    top: 22px;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    content: "";
-    text-align: center;
-    opacity: .25;
-    color: black;
-    background-color: #000;
-    -webkit-font-smoothing: antialiased;
-    transform: rotate(90deg);
-}
-#pickup .slick-area li{
-    padding: 0 15px;
-}
-button::before, button::after{
-    background-color: transparent;
-}
-.slide-items li {
-    height: auto;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-/********************************************************
-質問
-**********************************************************/
-
-.include-accordion{
-    width: 70%;
-    margin: 0 auto;
-    padding: 0;
-}
-#question .accordion__list{
-    margin: 20px 0;
-}
-#question .accordionBtn{
-    color: #814719;
-    border: 1px solid #814719;
-    border-radius: 10px;
-}
-
-#question ul ul{
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    transition: .5s;
-    margin:0;
-}
-
-
-#question ul li li{
-    padding: 10px;
-    color: #814719;
-}
-
-
-#question button{
-    position: relative;
-    border: none;
-    width: 100%;
-    background-color: inherit;
-    cursor: pointer;
-    text-align: left;
-    padding: 10px 20px;
-    font-size:1em;
-}
-
-
-#question button::before,
-#question button::after{
-    content:"";
-    position: absolute;
-    top: 47%;
-    width: 1.5px;
-    height: 8px;
-    background-color: #814719;
-    transition: .4s;
-}
-
-
-#question button::before{
-    transform: rotate(-45deg);
-    right: 35px;
-}
-
-
-#question button::after{
-    transform: rotate(45deg);
-    right: 30px;
-}
-
-
-#question li.active button::before{
-    transform: rotate(-135deg);
-    transition:.5s;
-}
-
-
-#question li.active button::after{
-    transform: rotate(135deg);
-    transition:.4s;
-}
-#question p{
-    width: 85%;
-    margin: 50px auto 0;
-}
-
 
 /********************************************************
 お知らせ
 **********************************************************/
-/* 共通 */
-.sub__tittle{
-    position: relative;
-    padding: 5px 20px;
-    font-size: 2.3rem;
+.news__flex{
+    display: flex;
 }
-.sub__tittle::before{
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translate(0,-50%);
-    background: #71713D;
-    width: 7px;
-    height: 90%;
+#news .title{
+    width: 30%;
+    padding-left: 80px;
 }
-
-/* news */
-.news{
-    width: 85%;
-    margin: 0 auto 100px;
+#news .title p{
+    text-align: start;
 }
-
-.news__list{
-    width: 90%;
-    margin: 40px auto 0;
+.news__link{
+    border: #858585 1px solid;
+    padding: 5px 15px;
+    color: #5c5c5c;
+    background: #E4E2D6;
+    display: block;
+    margin: 50px auto;
+    max-width: 250px;
+    text-align: center;
+}
+#news .news__list{
+    width: 60%;
+    margin-top: 20px;
 }
 .news__item{
     display: flex;
@@ -862,73 +437,170 @@ button::before, button::after{
     font-size: 2.0rem;
     margin-left: 20px;
 }
-.news__link{
-    text-align: end;
-    margin-top: 40px;
-}
-.news__link a{
-    background: transparent;
-    padding: 5px 20px;
-    border: 1px solid #814719;
-    color: #814719;
-}
-
-/* ブログ */
-.blog{
-    width: 85%;
-    margin: 0 auto;
-}
-.blog__list{
-    display: flex;
-    justify-content: center;
-    margin: 40px auto;
-    width: 90%;
-}
-.blog__item{
-    width: 50%;
-    border: 1px solid #c6c6c6;
-    margin: 0 10px;
-}
-.blog__item img{
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.blog__day{
-    font-size: 1.3rem;
-    margin-top: 15px;
-    padding-left: 10px;
-}
-.blog__tittle{
-    font-weight: bold;
-    margin-top: 5px;
-    padding: 0 10px;
-    font-size: 1.4rem;
-}
-.blog__txt{
-    font-size: 1.3rem;
-    margin: 5px 0 10px;
-    padding: 0 10px;
-}
-
 
 /********************************************************
-line
+information
 **********************************************************/
-#line{
-    background: #fff2de;
-    padding: 40px 0;
+#information{
+    background:#E4E2D6;
 }
-.line__item{
-    padding: 80px 0 0;
+#information .title{
+    margin: 0 auto;
+}
+.information__list{
+    display: flex;
+}
+.information__item{
+    width: 33.3%;
+    height: 400px;
+    position: relative;
+    border-right: 1px solid #fff;
+}
+.information__item3 {
+    border-right: 0;
+}
+.information__item img{
+    object-fit: cover;
+}
+.information__item__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.information__item__txt{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+}
+.information__item__txt p{
+    color: #fff;
     text-align: center;
 }
-.line__item p{
+.information__item__txt p:nth-of-type(1){
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.information__item__txt__link__line{
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 2.0rem;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+.information__item__txt__link__tel{
+    color: #fff;
+    display: block;
+    text-align: center;
     font-size: 3.0rem;
+    padding: 5px 20px;
+    margin: 0 auto;
+}
+.information__item__txt__link__map{
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 2.0rem;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+.information__item__txt img{
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto 30px;
 }
 
-
+/********************************************************
+質問
+**********************************************************/
+.question__flex{
+    display: flex;
+}
+#question .title{
+    margin: 0 auto;
+}
+#question .title p{
+    text-align: start;
+}
+#question .question__inner{
+    width: 80%;
+    margin: 0 auto;
+}
+.include-accordion{
+    width: 100%;
+    padding: 0;
+}
+#question .accordion__list{
+    margin: 20px 0;
+}
+#question .accordionBtn{
+    color: #814719;
+    border: 1px solid #814719;
+    border-radius: 10px;
+}
+#question ul ul{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: .5s;
+    margin:0;
+}
+#question ul li li{
+    padding: 10px;
+    color: #814719;
+}
+#question button{
+    position: relative;
+    border: none;
+    width: 100%;
+    background-color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 20px;
+    font-size:1em;
+}
+#question button::before,
+#question button::after{
+    content:"";
+    position: absolute;
+    top: 47%;
+    width: 1.5px;
+    height: 8px;
+    background-color: #814719;
+    transition: .4s;
+}
+#question button::before{
+    transform: rotate(-45deg);
+    right: 35px;
+}
+#question button::after{
+    transform: rotate(45deg);
+    right: 30px;
+}
+#question li.active button::before{
+    transform: rotate(-135deg);
+    transition:.5s;
+}
+#question li.active button::after{
+    transform: rotate(135deg);
+    transition:.4s;
+}
+.question__doctor{
+    margin-top: 50px;
+}
 
 
 /********************************************************
@@ -953,52 +625,40 @@ sns
     display: block;
     margin: 0 auto;
 }
-/********************************************************
-map
-**********************************************************/
-iframe{
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    height: 300px;
-}
 
 /********************************************************
 footer
 **********************************************************/
 
 footer{
-    background: #7A5741;
-    padding: 50px 50px 25px;
-}
-footer p{
-    color: #fff;
+    background-color: #E4E2D6;
+    padding: 50px 30px 30px;
+
 }
 .footer__logo{
-    font-size: 4.0rem;
-    margin-bottom: 20px;
+    width: 158px;
+    height: 150px;
+    margin-bottom: 15px;
 }
-
-.footer__address{
-    margin-bottom: 10px;
+.footer__logo img{
+    margin-left: 18px;
 }
-.footer__tel{
-    margin-bottom: 10px;
-}
-
-
-.footer__open{
+.footer__txt__item{
     display: flex;
 }
-.footer__open p:nth-of-type(1){
-    margin-right: 10px;
-    margin-bottom: 50px;
+.footer__txt__item p{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #030200;
 }
-
-.footer__copy{
+.footer__copy p{
     text-align: center;
+    color: #030200;
+    font-size: 1.4rem;
+    margin-top: 50px;
 }
 
+/* 画像スクロール */
 .bg__img{
     position: relative;
     height: 900px;
@@ -1018,7 +678,6 @@ footer p{
     height: 390px;
 }
 
-/* 画像スクロール */
 .bg__img img{
     object-fit: cover;
 }
@@ -1045,11 +704,9 @@ footer p{
     z-index: 9999;
     width: 100vw;
     height: 100vh;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     opacity: 0;
     visibility: hidden;
     transition: 0.6s;
-
 }
 
 body.open_popup .bg_onetime_popup {
